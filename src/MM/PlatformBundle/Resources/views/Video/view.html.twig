@@ -1,0 +1,58 @@
+{# src/MM/PlatformBundle/Resources/view/Article/view.html.twig #}
+
+{% extends "MMPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+  Vue d'une video
+{% endblock %}
+
+{% block ocplatform_body %}
+
+                    <div class="caption">
+                        <h3>{{ video.title }}</h3>
+                    <video id = "vid" controls width="300"><source src="{{ asset(video.webPath) }}" type="video/mp4">
+                        <source src="{{ asset(video.webPath) }}" type="video/avi">
+                    Your browser does not support the video tag.
+                  </video> 
+                         <p>{{ video.description }}</p>
+                    </div>
+    
+    <!-- Modal -->
+        <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">{{ video.title }}</h4>
+      </div>
+      <div class="modal-body">
+          <video controls width="600"><source src="{{ asset(video.webPath) }}" type="video/mp4">
+              <source src="{{ asset(video.webPath) }}" type="video/avi">
+                    Your browser does not support the video tag.
+                  </video>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <p>
+    <a href="{{ path('mm_platform_list_videos') }}" class="btn btn-default">
+      <i class="glyphicon glyphicon-chevron-left"></i>
+      Retour à la liste
+    </a>
+      <a href="#" data-toggle="modal" data-target="#imageModal" class="btn btn-default">
+          Voir la vidéo en plus grand
+    </a>
+    {% if is_granted("ROLE_AUTEUR") %}
+      <a href="{{ path('mm_platform_video_edit', {'id': video.id}) }}" class="btn btn-default">
+        <i class="glyphicon glyphicon-edit"></i>
+        Modifier la video
+      </a>
+      <a href="{{ path('mm_platform_video_delete', {'id': video.id}) }}" class="btn btn-danger">
+        <i class="glyphicon glyphicon-trash"></i>
+        Supprimer la video
+      </a>
+    {% endif %}
+  </p>
+
+{% endblock %}

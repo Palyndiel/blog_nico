@@ -1,0 +1,37 @@
+{# src/MM/PlatformBundle/Resources/views/Article/index.html.twig #}
+
+{% extends "MMPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+  Liste des photos
+{% endblock %}
+
+{% block ocplatform_body %}
+<div class="row">
+  <h2>Liste des photos</h2>
+
+  <ul>
+    {% for image in listImages %}
+      <div class="col-sm-6 col-md-6">
+                <div class="thumbnail">
+                    <a href="{{ path('mm_platform_picture_view', {'id': image.id}) }}"> <img src="{{ asset(image.webPath) }}"
+                         alt="{{ image.alt }}"></a>
+                    <div class="caption">
+                        <p>{{ image.description }}</p>
+                    </div>
+                </div>
+              </div>
+    {% else %}
+      <li>Pas (encore !) de photos</li>
+    {% endfor %}
+  </ul>
+</div>
+    {% if is_granted("ROLE_AUTEUR") %}
+        <div id="boutonAjout">
+        <a href="{{ path('mm_platform_picture_add') }}" class="btn btn-success">
+          <i class="glyphicon glyphicon-plus"></i>
+          Ajouter une photo
+        </a>
+</div>
+    {% endif %}
+{% endblock %}

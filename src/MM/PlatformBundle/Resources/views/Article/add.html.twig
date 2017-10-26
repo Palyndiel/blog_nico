@@ -1,0 +1,15 @@
+{# src/MM/PlatformBundle/Resources/views/Article/edit.html.twig #}
+
+{% extends "MMPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+  Ajouter un article - {{ parent() }}
+{% endblock %}
+
+{% block ocplatform_body %}
+
+  <h2>Ajouter un article</h2>
+
+  {{ include("MMPlatformBundle:Article:form.html.twig") }}
+
+{% endblock %}

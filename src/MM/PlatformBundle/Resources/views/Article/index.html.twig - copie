@@ -1,0 +1,57 @@
+{# src/MM/PlatformBundle/Resources/views/Article/index.html.twig #}
+
+{% extends "MMPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+  Accueil
+{% endblock %}
+
+{% block ocplatform_body %}
+<div class="row">
+  <div class="col-md-5">
+  <h2>Derniers articles</h2>
+
+  <ul>
+    {% for article in listArticles %}
+      <div class="panel panel-info">
+          <div class="panel-heading">
+        <a class="panel-title" href="{{ path('mm_platform_view', {'id': article.id}) }}">
+          {{ article.title }}
+        </a>
+        <small>le {{ article.date|date('d/m/Y') }} par {{ article.author }}</small>
+        <span class="badge">{{ article.nbComments }}</span>
+      </div>
+      <div class="panel-body">
+        <p>{{ article.resume }} </p>
+        {% if article.image is not null %}
+        <img class="img-responsive" src="{{ asset(article.image.webPath) }}"
+                         alt="{{ article.image.alt }}"></a>  
+        {% endif %}
+      </div>
+      </div>
+    {% else %}
+      <li>Pas (encore !) d'articles</li>
+    {% endfor %}
+  </ul>
+</div>
+<div class="col-md-7">
+  <h2>Dernières photos</h2>
+
+  <ul>
+    {% for image in listImages %}
+      <div class="col-sm-6 col-md-6">
+                <div class="thumbnail">
+                    <a href="{{ path('mm_platform_picture_view', {'id': image.id}) }}"> <img src="{{ asset(image.webPath) }}"
+                         alt="{{ image.alt }}"></a>
+                    <div class="caption">
+                        <p>{{ image.description }}</p>
+                    </div>
+                </div>
+              </div>
+    {% else %}
+      <li>Pas (encore !) de photo</li>
+    {% endfor %}
+  </ul>
+</div>
+</div>
+{% endblock %}

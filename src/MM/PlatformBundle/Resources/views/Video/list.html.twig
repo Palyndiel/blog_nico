@@ -1,0 +1,34 @@
+{# src/MM/PlatformBundle/Resources/views/Article/index.html.twig #}
+
+{% extends "MMPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+  Liste des videos
+{% endblock %}
+
+{% block ocplatform_body %}
+<div class="row">
+  <h2>Liste des videos</h2>
+
+  <ul>
+    {% for video in listVideos %}
+      <div class="col-sm-6 col-md-6">
+                    <a href="{{ path('mm_platform_video_view', {'id': video.id}) }}"><h3>{{ video.title }}</h3></a>
+                    <div class="caption">
+                        <p>{{ video.description }}</p>
+                    </div>
+              </div>
+    {% else %}
+      <li>Pas (encore !) de videos</li>
+    {% endfor %}
+  </ul>
+</div>
+    {% if is_granted("ROLE_AUTEUR") %}
+        <div id="boutonAjout">
+        <a href="{{ path('mm_platform_video_add') }}" class="btn btn-success">
+          <i class="glyphicon glyphicon-plus"></i>
+          Ajouter une vidéo
+        </a>
+</div>
+    {% endif %}
+{% endblock %}

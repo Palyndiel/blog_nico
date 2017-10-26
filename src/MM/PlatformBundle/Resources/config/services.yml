@@ -1,0 +1,33 @@
+services:
+#    mm_platform.example:
+#        class: MM\PlatformBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]
+
+    mm_platform.antispam:
+        class: MM\PlatformBundle\Antispam\MMAntispam
+
+    mm_platform.validator.antiflood:
+        class: MM\PLatformBundle\Validator\AntifloodValidator
+        arguments: ["@request_stack", "@doctrine.orm.entity_manager"]
+        tags: 
+            - { name: validator.constraints_validator, alias: mm_platform_antiflood }
+            
+    mm_platform.email.comment_mailer:
+        class: MM\PlatformBundle\Email\CommentMailer
+        arguments: ["@mailer", "@service_container"]
+            
+    mm_platform.doctrine_listener.comment_creation:
+        class: MM\PlatformBundle\DoctrineListener\CommentCreationListener
+        arguments: ["@mm_platform.email.comment_mailer"]
+        tags:
+            - { name: doctrine.event_listener, event: postPersist }
+            
+    mm_platform.email.article_mailer:
+        class: MM\PlatformBundle\Email\ArticleMailer
+        arguments: ["@mailer", "@service_container"]
+            
+    mm_platform.doctrine_listener.article_creation:
+        class: MM\PlatformBundle\DoctrineListener\ArticleCreationListener
+        arguments: ["@mm_platform.email.article_mailer"]
+        tags:
+            - { name: doctrine.event_listener, event: postPersist }

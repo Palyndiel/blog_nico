@@ -1,0 +1,13 @@
+{# src/MM/PlatformBundle/Resources/views/Article/menu.html.twig #}
+
+<ul class="nav nav-pills nav-stacked">
+  {% for article in listArticles %}
+    <li>
+      <a href="{{ path('mm_platform_view', {'id': article.id}) }}">
+        {{ article.title }}
+      </a>
+    </li>
+   {% else %}
+   	<li>Pas (encore !) d'articles</li>
+  {% endfor %}
+</ul>

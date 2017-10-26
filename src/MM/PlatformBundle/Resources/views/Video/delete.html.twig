@@ -1,0 +1,27 @@
+{% extends "MMPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+  Supprimer une photo - {{ parent() }}
+{% endblock %}
+
+{% block ocplatform_body %}
+
+  <h2>Supprimer une photo</h2>
+
+  <p>
+    Etes-vous certain de vouloir supprimer la photo "{{ image.title }}" ?
+  </p>
+
+  {# On met l'id de l'annonce dans la route de l'action du formulaire #}
+  <form action="{{ path('mm_platform_picture_delete', {'id': image.id}) }}" method="post">
+    <a href="{{ path('mm_platform_picture_view', {'id': image.id}) }}" class="btn btn-default">
+      <i class="glyphicon glyphicon-chevron-left"></i>
+      Retour à la photo
+    </a>
+    {# Ici j'ai écrit le bouton de soumission à la main #}
+    <input type="submit" value="Supprimer" class="btn btn-danger" />
+    {# Ceci va générer le champ CSRF #}
+    {{ form_rest(form) }}
+  </form>
+
+{% endblock %}

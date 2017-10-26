@@ -1,0 +1,42 @@
+{# src/MM/PlatformBundle/Resources/views/Article/index.html.twig #}
+
+{% extends "MMPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+  Liste des articles
+{% endblock %}
+
+{% block ocplatform_body %}
+<div class="row">
+  <h2>Liste des articles</h2>
+
+  <ul>
+    {% for article in listArticles %}
+      <div class="col-md-6">
+      <div class="panel panel-info">
+          <div class="panel-heading">
+        <a class="panel-title" href="{{ path('mm_platform_view', {'slug': article.slug}) }}">
+          {{ article.title }}
+        </a>
+        <small>le {{ article.date|date('d/m/Y') }} par {{ article.author }}</small>
+        <span class="badge">{% for thread in listThreads %} {% if article.id == thread.id %} {{ thread.numComments }} {% endif %} {% endfor %}</span>
+      </div>
+      <div class="panel-body">
+        <p>{{ article.resume }} </p>
+      </div>
+      </div>
+    </div>
+    {% else %}
+      <li>Pas (encore !) d'articles</li>
+    {% endfor %}
+  </ul>
+  </div>
+    {% if is_granted("ROLE_AUTEUR") %}
+        <div id="boutonAjout">
+        <a href="{{ path('mm_platform_add') }}" class="btn btn-success">
+          <i class="glyphicon glyphicon-plus"></i>
+          Ajouter un article
+        </a>
+</div>
+    {% endif %}
+{% endblock %}

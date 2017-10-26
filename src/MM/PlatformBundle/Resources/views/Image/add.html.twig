@@ -1,0 +1,15 @@
+{# src/MM/PlatformBundle/Resources/views/Image/edit.html.twig #}
+
+{% extends "MMPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+  Ajouter une photo - {{ parent() }}
+{% endblock %}
+
+{% block ocplatform_body %}
+
+  <h2>Ajouter une photo</h2>
+
+  {{ include("MMPlatformBundle:Image:form.html.twig") }}
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{# src/MM/PlatformBundle/Resources/views/Article/edit.html.twig #}
+
+{% extends "MMPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+  Modifier un article - {{ parent() }}
+{% endblock %}
+
+{% block ocplatform_body %}
+
+  <h2>Modifier un article</h2>
+
+  {{ include("MMPlatformBundle:Article:form.html.twig") }}
+
+  <p>
+    Vous éditez un article déjà existante, merci de ne pas changer
+    l'esprit général de l'article déjà publiée.
+  </p>
+
+  <p>
+    <a href="{{ path('mm_platform_view', {'id': article.id}) }}" class="btn btn-default">
+      <i class="glyphicon glyphicon-chevron-left"></i>
+      Retour à l'article
+    </a>
+  </p>
+
+{% endblock %}

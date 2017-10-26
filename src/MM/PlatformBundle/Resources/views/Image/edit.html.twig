@@ -1,0 +1,25 @@
+{% extends "MMPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+  Modifier une image - {{ parent() }}
+{% endblock %}
+
+{% block ocplatform_body %}
+
+  <h2>Modifier une image</h2>
+
+  {{ include("MMPlatformBundle:Image:form.html.twig") }}
+
+  <p>
+    Vous éditez une photo déjà existante, merci de ne pas changer
+    l'esprit général.
+  </p>
+
+  <p>
+    <a href="{{ path('mm_platform_picture_view', {'id': image.id}) }}" class="btn btn-default">
+      <i class="glyphicon glyphicon-chevron-left"></i>
+      Retour à la photo
+    </a>
+  </p>
+
+{% endblock %}

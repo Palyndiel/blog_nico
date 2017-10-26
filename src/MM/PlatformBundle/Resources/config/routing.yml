@@ -1,0 +1,180 @@
+# src/OC/PlatformBundle/Resources/config/routing.yml
+
+mm_platform_home:
+    path:      /{limit}
+    defaults:
+        _controller: MMCoreBundle:Core:index
+        limit:		 3
+    requirements:
+        page: \d*
+
+mm_platform_list_articles:
+    path:      /all/articles/{page}
+    defaults:
+        _controller: MMPlatformBundle:Article:viewAll
+        page:        1
+    requirements:
+        page: \d*
+
+mm_platform_list_pictures:
+    path:      /all/pictures/{page}
+    defaults:
+        _controller: MMPlatformBundle:Image:viewAll
+        page:        1
+    requirements:
+        page: \d*
+
+mm_platform_list_videos:
+    path:      /all/videos/{page}
+    defaults:
+        _controller: MMPlatformBundle:Video:viewAll
+        page:        1
+    requirements:
+        page: \d*
+
+mm_platform_about:
+    path:      /about/
+    defaults:
+        _controller: MMPlatformBundle:About:index
+
+mm_platform_view:
+    path:      /article/{slug}
+    defaults:
+        _controller: MMPlatformBundle:Article:view
+
+mm_platform_add:
+    path:      /add/
+    defaults:
+        _controller: MMPlatformBundle:Article:add
+
+mm_platform_edit:
+    path:      /edit/{id}
+    defaults:
+        _controller: MMPlatformBundle:Article:edit
+    requirements:
+        id: \d+
+
+mm_platform_delete:
+    path:      /delete/{id}
+    defaults:
+        _controller: MMPlatformBundle:Article:delete
+    requirements:
+        id: \d+
+
+mm_admin_home:
+    path:      /admin/
+    defaults:
+        _controller: MMPlatformBundle:Admin:index
+
+mm_admin_user_promote:
+    path:      /admin/user/promote/{id}
+    defaults:
+        _controller: MMPlatformBundle:Admin:promoteUser
+    requirements:
+        id: \d+
+
+mm_admin_user_demote:
+    path:      /admin/user/demote/{id}
+    defaults:
+        _controller: MMPlatformBundle:Admin:demoteUser
+    requirements:
+        id: \d+
+
+mm_admin_user_add:
+    path:      /admin/user/add
+    defaults:
+        _controller: MMPlatformBundle:Admin:addUser
+
+mm_admin_user_delete:
+    path:      /admin/user/delete/{id}
+    defaults:
+        _controller: MMPlatformBundle:Admin:deleteUser
+    requirements:
+        id: \d+
+
+mm_admin_comment_edit:
+    path:     /admin/comment/edit/{id}
+    defaults:
+        _controller: MMPlatformBundle:Admin:editComment
+    requirements:
+        id: \d+
+
+mm_admin_comment_delete:
+    path:      /admin/comment/delete/{id}
+    defaults:
+        _controller: MMPlatformBundle:Admin:deleteComment
+    requirements:
+        id: \d+
+
+mm_platform_picture_add:
+    path:      /addPicture/
+    defaults:
+        _controller: MMPlatformBundle:Image:add
+
+mm_platform_picture_edit:
+    path:      /editPicture/{id}
+    defaults:
+        _controller: MMPlatformBundle:Image:edit
+    requirements:
+        id: \d+
+
+mm_platform_picture_delete:
+    path:      /deletePicture/{id}
+    defaults:
+        _controller: MMPlatformBundle:Image:delete
+    requirements:
+        id: \d+
+
+mm_platform_picture_view:
+    path:      /picture/{id}
+    defaults:
+        _controller: MMPlatformBundle:Image:view
+    requirements:
+        id: \d+
+
+mm_platform_video_add:
+    path:      /addVideo/
+    defaults:
+        _controller: MMPlatformBundle:Video:add
+
+mm_platform_video_edit:
+    path:      /editVideo/{id}
+    defaults:
+        _controller: MMPlatformBundle:Video:edit
+    requirements:
+        id: \d+
+
+mm_platform_video_delete:
+    path:      /deleteVideo/{id}
+    defaults:
+        _controller: MMPlatformBundle:Video:delete
+    requirements:
+        id: \d+
+
+mm_platform_video_view:
+    path:      /video/{id}
+    defaults:
+        _controller: MMPlatformBundle:Video:view
+    requirements:
+        id: \d+
+
+mm_platform_addlike:
+  path: /add/like
+  defaults: 
+       _controller: MMPlatformBundle:Article:like
+  requirements:
+    _method: POST
+    
+mm_platform_getlikes:
+  path: /get/like
+  defaults: 
+       _controller: MMPlatformBundle:Article:getlike
+  requirements:
+    _method: POST
+    
+mm_platform_removelike:
+  path: /remove/like
+  defaults: 
+       _controller: MMPlatformBundle:Article:dislike
+  requirements:
+    _method: POST

@@ -1,0 +1,25 @@
+{% extends "MMPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+  Modifier un commentaire - {{ parent() }}
+{% endblock %}
+
+{% block ocplatform_body %}
+
+  <h2>Modifier un commentaire</h2>
+
+  {{ include("MMPlatformBundle:Comment:form.html.twig") }}
+
+  <p>
+    Vous éditez un commentaire déjà existante, merci de ne pas changer
+    l'esprit général du commentaire déjà publié.
+  </p>
+
+  <p>
+    <a href="{{ path('mm_platform_view', {'id': comment.article.id}) }}" class="btn btn-default">
+      <i class="glyphicon glyphicon-chevron-left"></i>
+      Retour à l'article
+    </a>
+  </p>
+
+{% endblock %}

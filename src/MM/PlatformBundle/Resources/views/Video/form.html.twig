@@ -1,0 +1,50 @@
+{# src/MM/PlatformBundle/Resources/views/Image/form.html.twig #}
+
+<h3>Formulaire de video</h3>
+
+<div class="well">
+  {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+
+  {# Les erreurs générales du formulaire. #}
+  {{ form_errors(form) }}
+
+  <div class="form-group">
+    {{ form_label(form.title, "Titre de la video", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+    {{ form_errors(form.title) }}
+    <div class="col-sm-10">
+      {{ form_widget(form.title, {'attr': {'class': 'form-control'}}) }}
+    </div>
+  </div>
+
+  {# Idem pour un autre champ. #}
+  <div class="form-group">
+    {{ form_label(form.description, "Description de la video", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+    {{ form_errors(form.description) }}
+    <div class="col-sm-10">
+      {{ form_widget(form.description, {'attr': {'class': 'form-control'}}) }}
+    </div>
+  </div>
+
+  <div class="form-group">
+    {{ form_label(form.file, "Choisissez le fichier", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+    {{ form_errors(form.file) }}
+    <div class="col-sm-10">
+      {{ form_widget(form.file) }}
+    </div>
+  </div>
+
+  {# Pour le bouton, pas de label ni d'erreur, on affiche juste le widget #}
+    <div class="form-group">
+      <div class="col-sm-offset-11 col-sm-1">
+        {{ form_widget(form.save, {'attr': {'class': 'btn btn-primary'}}) }}
+      </div>
+    </div>
+
+  {# Génération automatique des champs pas encore écrits.
+     Dans cet exemple, ce serait le champ CSRF (géré automatiquement par Symfony !)
+     et tous les champs cachés (type « hidden »). #}
+  {{ form_rest(form) }}
+
+  {# Fermeture de la balise <form> du formulaire HTML #}
+  {{ form_end(form) }}
+</div>

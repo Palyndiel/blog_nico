@@ -1,0 +1,871 @@
+[12-Mar-2017 16:43:24 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'nicomin'' in /home/ubuntu/workspace/Symfony/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:43
+Stack trace:
+#0 /home/ubuntu/workspace/Symfony/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(43): PDO->__construct('mysql:host=127....', 'root', NULL, Array)
+#1 /home/ubuntu/workspace/Symfony/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOMySql/Driver.php(45): Doctrine\DBAL\Driver\PDOConnection->__construct('mysql:host=127....', 'root', NULL, Array)
+#2 /home/ubuntu/workspace/Symfony/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(360): Doctrine\DBAL\Driver\PDOMySql\Driver->connect(Array, 'root', NULL, Array)
+#3 /home/ubuntu/workspace/Symfony/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(429): Doctrine\DBAL\Connection->connect()
+#4 /home/ubuntu/workspace/Symfony/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(389): Doctrine\DBAL\Connection->getDatabasePlatformVersion()
+#5 /h in /home/ubuntu/workspace/Symfony/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/AbstractMySQLDriver.php on line 103
+[14-Mar-2017 17:33:27 UTC] PHP Fatal error:  Call to undefined method MM\PlatformBundle\Email\ArticleMailer::get() in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/ArticleMailer.php on line 21
+[14-Mar-2017 17:33:27 UTC] PHP Stack trace:
+[14-Mar-2017 17:33:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/Symfony/web/app_dev.php:0
+[14-Mar-2017 17:33:27 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/Symfony/web/app_dev.php:30
+[14-Mar-2017 17:33:27 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[14-Mar-2017 17:33:27 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:62
+[14-Mar-2017 17:33:27 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139}() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[14-Mar-2017 17:33:27 UTC] PHP   6. MM\PlatformBundle\Controller\ArticleController->addAction() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[14-Mar-2017 17:33:27 UTC] PHP   7. Doctrine\ORM\EntityManager->flush() /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Controller/ArticleController.php:156
+[14-Mar-2017 17:33:27 UTC] PHP   8. Doctrine\ORM\UnitOfWork->commit() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php:356
+[14-Mar-2017 17:33:27 UTC] PHP   9. Doctrine\ORM\UnitOfWork->executeInserts() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:378
+[14-Mar-2017 17:33:27 UTC] PHP  10. Doctrine\ORM\Event\ListenersInvoker->invoke() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:1035
+[14-Mar-2017 17:33:27 UTC] PHP  11. Symfony\Bridge\Doctrine\ContainerAwareEventManager->dispatchEvent() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/Event/ListenersInvoker.php:117
+[14-Mar-2017 17:33:27 UTC] PHP  12. MM\PlatformBundle\DoctrineListener\ArticleCreationListener->postPersist() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Bridge/Doctrine/ContainerAwareEventManager.php:63
+[14-Mar-2017 17:33:27 UTC] PHP  13. MM\PlatformBundle\Email\ArticleMailer->sendNewNotification() /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/DoctrineListener/ArticleCreationListener.php:29
+[14-Mar-2017 17:47:54 UTC] PHP Parse error:  syntax error, unexpected ')', expecting '&' or variable (T_VARIABLE) in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/ArticleMailer.php on line 14
+[14-Mar-2017 17:47:54 UTC] PHP Stack trace:
+[14-Mar-2017 17:47:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/Symfony/web/app_dev.php:0
+[14-Mar-2017 17:47:54 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/Symfony/web/app_dev.php:30
+[14-Mar-2017 17:47:54 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[14-Mar-2017 17:47:54 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:62
+[14-Mar-2017 17:47:54 UTC] PHP   5. Symfony\Component\EventDispatcher\Debug\TraceableEventDispatcher->dispatch() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:120
+[14-Mar-2017 17:47:54 UTC] PHP   6. Symfony\Component\EventDispatcher\EventDispatcher->dispatch() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/EventDispatcher/Debug/TraceableEventDispatcher.php:132
+[14-Mar-2017 17:47:54 UTC] PHP   7. Symfony\Component\EventDispatcher\EventDispatcher->doDispatch() /home/ubuntu/workspace/Symfony/var/cache/dev/classes.php:4028
+[14-Mar-2017 17:47:54 UTC] PHP   8. call_user_func:{/home/ubuntu/workspace/Symfony/var/cache/dev/classes.php:4110}() /home/ubuntu/workspace/Symfony/var/cache/dev/classes.php:4110
+[14-Mar-2017 17:47:54 UTC] PHP   9. Symfony\Component\EventDispatcher\Debug\WrappedListener->__invoke() /home/ubuntu/workspace/Symfony/var/cache/dev/classes.php:4110
+[14-Mar-2017 17:47:54 UTC] PHP  10. call_user_func:{/home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/EventDispatcher/Debug/WrappedListener.php:61}() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/EventDispatcher/Debug/WrappedListener.php:61
+[14-Mar-2017 17:47:54 UTC] PHP  11. Symfony\Component\HttpKernel\EventListener\RouterListener->onKernelRequest() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/EventDispatcher/Debug/WrappedListener.php:61
+[14-Mar-2017 17:47:54 UTC] PHP  12. Symfony\Component\Routing\Router->matchRequest() /home/ubuntu/workspace/Symfony/var/cache/dev/classes.php:4898
+[14-Mar-2017 17:47:54 UTC] PHP  13. Symfony\Component\Routing\Router->getMatcher() /home/ubuntu/workspace/Symfony/var/cache/dev/classes.php:3495
+[14-Mar-2017 17:47:54 UTC] PHP  14. Symfony\Component\Config\ResourceCheckerConfigCacheFactory->cache() /home/ubuntu/workspace/Symfony/var/cache/dev/classes.php:3527
+[14-Mar-2017 17:47:54 UTC] PHP  15. call_user_func:{/home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/Config/ResourceCheckerConfigCacheFactory.php:46}() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/Config/ResourceCheckerConfigCacheFactory.php:46
+[14-Mar-2017 17:47:54 UTC] PHP  16. Symfony\Component\Routing\Router->Symfony\Component\Routing\{closure}() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/Config/ResourceCheckerConfigCacheFactory.php:46
+[14-Mar-2017 17:47:54 UTC] PHP  17. Symfony\Component\Routing\Router->getMatcherDumperInstance() /home/ubuntu/workspace/Symfony/var/cache/dev/classes.php:3517
+[14-Mar-2017 17:47:54 UTC] PHP  18. Symfony\Bundle\FrameworkBundle\Routing\Router->getRouteCollection() /home/ubuntu/workspace/Symfony/var/cache/dev/classes.php:3565
+[14-Mar-2017 17:47:54 UTC] PHP  19. Symfony\Component\DependencyInjection\Container->get() /home/ubuntu/workspace/Symfony/var/cache/dev/classes.php:3598
+[14-Mar-2017 17:47:54 UTC] PHP  20. appDevDebugProjectContainer->getRouting_LoaderService() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Container.php:273
+[14-Mar-2017 17:47:54 UTC] PHP  21. Symfony\Component\DependencyInjection\Container->get() /home/ubuntu/workspace/Symfony/var/cache/dev/appDevDebugProjectContainer.php:3265
+[14-Mar-2017 17:47:54 UTC] PHP  22. appDevDebugProjectContainer->getAssetic_AssetManagerService() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Container.php:273
+[14-Mar-2017 17:47:54 UTC] PHP  23. Symfony\Component\DependencyInjection\Container->get() /home/ubuntu/workspace/Symfony/var/cache/dev/appDevDebugProjectContainer.php:404
+[14-Mar-2017 17:47:54 UTC] PHP  24. appDevDebugProjectContainer->getTwigService() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Container.php:273
+[14-Mar-2017 17:47:54 UTC] PHP  25. Symfony\Component\DependencyInjection\Container->get() /home/ubuntu/workspace/Symfony/var/cache/dev/appDevDebugProjectContainer.php:4333
+[14-Mar-2017 17:47:54 UTC] PHP  26. appDevDebugProjectContainer->getSecurity_AuthorizationCheckerService() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Container.php:273
+[14-Mar-2017 17:47:54 UTC] PHP  27. Symfony\Component\DependencyInjection\Container->get() /home/ubuntu/workspace/Symfony/var/cache/dev/appDevDebugProjectContainer.php:3311
+[14-Mar-2017 17:47:54 UTC] PHP  28. appDevDebugProjectContainer->getSecurity_Authentication_ManagerService() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Container.php:273
+[14-Mar-2017 17:47:54 UTC] PHP  29. Symfony\Component\DependencyInjection\Container->get() /home/ubuntu/workspace/Symfony/var/cache/dev/appDevDebugProjectContainer.php:4896
+[14-Mar-2017 17:47:54 UTC] PHP  30. appDevDebugProjectContainer->getFosUser_UserProvider_UsernameService() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Container.php:273
+[14-Mar-2017 17:47:54 UTC] PHP  31. Symfony\Component\DependencyInjection\Container->get() /home/ubuntu/workspace/Symfony/var/cache/dev/appDevDebugProjectContainer.php:4749
+[14-Mar-2017 17:47:54 UTC] PHP  32. appDevDebugProjectContainer->getFosUser_UserManagerService() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Container.php:273
+[14-Mar-2017 17:47:54 UTC] PHP  33. Doctrine\Common\Persistence\AbstractManagerRegistry->getManager() /home/ubuntu/workspace/Symfony/var/cache/dev/appDevDebugProjectContainer.php:2205
+[14-Mar-2017 17:47:54 UTC] PHP  34. Symfony\Bridge\Doctrine\ManagerRegistry->getService() /home/ubuntu/workspace/Symfony/var/cache/dev/classes.php:122
+[14-Mar-2017 17:47:54 UTC] PHP  35. Symfony\Component\DependencyInjection\Container->get() /home/ubuntu/workspace/Symfony/var/cache/dev/classes.php:183
+[14-Mar-2017 17:47:54 UTC] PHP  36. appDevDebugProjectContainer->getDoctrine_Orm_DefaultEntityManagerService() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Container.php:273
+[14-Mar-2017 17:47:54 UTC] PHP  37. Symfony\Component\DependencyInjection\Container->get() /home/ubuntu/workspace/Symfony/var/cache/dev/appDevDebugProjectContainer.php:890
+[14-Mar-2017 17:47:54 UTC] PHP  38. appDevDebugProjectContainer->getDoctrine_Dbal_DefaultConnectionService() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Container.php:273
+[14-Mar-2017 17:47:54 UTC] PHP  39. Symfony\Component\DependencyInjection\Container->get() /home/ubuntu/workspace/Symfony/var/cache/dev/appDevDebugProjectContainer.php:832
+[14-Mar-2017 17:47:54 UTC] PHP  40. appDevDebugProjectContainer->getMmPlatform_DoctrineListener_ArticleCreationService() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Container.php:273
+[14-Mar-2017 17:47:54 UTC] PHP  41. Symfony\Component\DependencyInjection\Container->get() /home/ubuntu/workspace/Symfony/var/cache/dev/appDevDebugProjectContainer.php:2811
+[14-Mar-2017 17:47:54 UTC] PHP  42. appDevDebugProjectContainer->getMmPlatform_Email_ArticleMailerService() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Container.php:273
+[14-Mar-2017 17:47:54 UTC] PHP  43. spl_autoload_call() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Container.php:2837
+[14-Mar-2017 17:47:54 UTC] PHP  44. Symfony\Component\Debug\DebugClassLoader->loadClass() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Container.php:2837
+[14-Mar-2017 17:49:08 UTC] PHP Fatal error:  Call to undefined method MM\PlatformBundle\Email\ArticleMailer::get() in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/ArticleMailer.php on line 21
+[14-Mar-2017 17:49:08 UTC] PHP Stack trace:
+[14-Mar-2017 17:49:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/Symfony/web/app_dev.php:0
+[14-Mar-2017 17:49:08 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/Symfony/web/app_dev.php:30
+[14-Mar-2017 17:49:08 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[14-Mar-2017 17:49:08 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:62
+[14-Mar-2017 17:49:08 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139}() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[14-Mar-2017 17:49:08 UTC] PHP   6. MM\PlatformBundle\Controller\ArticleController->addAction() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[14-Mar-2017 17:49:08 UTC] PHP   7. Doctrine\ORM\EntityManager->flush() /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Controller/ArticleController.php:156
+[14-Mar-2017 17:49:08 UTC] PHP   8. Doctrine\ORM\UnitOfWork->commit() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php:356
+[14-Mar-2017 17:49:08 UTC] PHP   9. Doctrine\ORM\UnitOfWork->executeInserts() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:378
+[14-Mar-2017 17:49:08 UTC] PHP  10. Doctrine\ORM\Event\ListenersInvoker->invoke() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:1035
+[14-Mar-2017 17:49:08 UTC] PHP  11. Symfony\Bridge\Doctrine\ContainerAwareEventManager->dispatchEvent() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/Event/ListenersInvoker.php:117
+[14-Mar-2017 17:49:08 UTC] PHP  12. MM\PlatformBundle\DoctrineListener\ArticleCreationListener->postPersist() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Bridge/Doctrine/ContainerAwareEventManager.php:63
+[14-Mar-2017 17:49:08 UTC] PHP  13. MM\PlatformBundle\Email\ArticleMailer->sendNewNotification() /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/DoctrineListener/ArticleCreationListener.php:29
+[14-Mar-2017 18:57:03 UTC] PHP Fatal error:  Uncaught exception 'Symfony\Component\Debug\Exception\ContextErrorException' with message 'Catchable Fatal Error: Argument 2 passed to MM\PlatformBundle\Email\ArticleMailer::__construct() must be an instance of MM\PlatformBundle\Email\Container, none given, called in /home/ubuntu/workspace/Symfony/var/cache/prod/appProdProjectContainer.php on line 1070 and defined' in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/ArticleMailer.php:15
+Stack trace:
+#0 /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/ArticleMailer.php(15): Symfony\Component\Debug\ErrorHandler->handleError(4096, 'Argument 2 pass...', '/home/ubuntu/wo...', 15, Array)
+#1 /home/ubuntu/workspace/Symfony/var/cache/prod/appProdProjectContainer.php(1070): MM\PlatformBundle\Email\ArticleMailer->__construct(Object(Swift_Mailer))
+#2 /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Container.php(273): appProdProjectContainer->getMmPlatform_Email_ArticleMailerService()
+#3 /home/ubuntu/work in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/ArticleMailer.php on line 15
+[14-Mar-2017 18:57:29 UTC] PHP Fatal error:  Uncaught exception 'Symfony\Component\Debug\Exception\ContextErrorException' with message 'Catchable Fatal Error: Argument 2 passed to MM\PlatformBundle\Email\ArticleMailer::__construct() must implement interface Symfony\Component\DependencyInjection\ContainerInterface, none given, called in /home/ubuntu/workspace/Symfony/var/cache/prod/appProdProjectContainer.php on line 1070 and defined' in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/ArticleMailer.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/ArticleMailer.php(16): Symfony\Component\Debug\ErrorHandler->handleError(4096, 'Argument 2 pass...', '/home/ubuntu/wo...', 16, Array)
+#1 /home/ubuntu/workspace/Symfony/var/cache/prod/appProdProjectContainer.php(1070): MM\PlatformBundle\Email\ArticleMailer->__construct(Object(Swift_Mailer))
+#2 /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Container.php(273): appProdProjectContainer->getMmPlatform_Email_ArticleMailerServi in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/ArticleMailer.php on line 16
+[14-Mar-2017 18:58:15 UTC] PHP Fatal error:  Uncaught exception 'Symfony\Component\Routing\Exception\ResourceNotFoundException' in /home/ubuntu/workspace/Symfony/var/cache/prod/appProdUrlMatcher.php:596
+Stack trace:
+#0 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1357): appProdUrlMatcher->match('/css/jquery.car...')
+#1 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1226): Symfony\Component\Routing\Matcher\UrlMatcher->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#2 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2362): Symfony\Component\Routing\Router->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#3 [internal function]: Symfony\Component\HttpKernel\EventListener\RouterListener->onKernelRequest(Object(Symfony\Component\HttpKernel\Event\GetResponseEvent), 'kernel.request', Object(Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher))
+#4 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2162): call_user_func(Array, Object(Symfony\Component\HttpKernel\Event\GetResponseEv in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/ArticleMailer.php on line 16
+[14-Mar-2017 18:58:19 UTC] PHP Fatal error:  Uncaught exception 'Symfony\Component\Routing\Exception\ResourceNotFoundException' in /home/ubuntu/workspace/Symfony/var/cache/prod/appProdUrlMatcher.php:596
+Stack trace:
+#0 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1357): appProdUrlMatcher->match('/css/jquery.car...')
+#1 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1226): Symfony\Component\Routing\Matcher\UrlMatcher->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#2 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2362): Symfony\Component\Routing\Router->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#3 [internal function]: Symfony\Component\HttpKernel\EventListener\RouterListener->onKernelRequest(Object(Symfony\Component\HttpKernel\Event\GetResponseEvent), 'kernel.request', Object(Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher))
+#4 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2162): call_user_func(Array, Object(Symfony\Component\HttpKernel\Event\GetResponseEv in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/ArticleMailer.php on line 16
+[14-Mar-2017 18:58:21 UTC] PHP Fatal error:  Uncaught exception 'Symfony\Component\Routing\Exception\ResourceNotFoundException' in /home/ubuntu/workspace/Symfony/var/cache/prod/appProdUrlMatcher.php:596
+Stack trace:
+#0 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1357): appProdUrlMatcher->match('/css/jquery.car...')
+#1 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1226): Symfony\Component\Routing\Matcher\UrlMatcher->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#2 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2362): Symfony\Component\Routing\Router->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#3 [internal function]: Symfony\Component\HttpKernel\EventListener\RouterListener->onKernelRequest(Object(Symfony\Component\HttpKernel\Event\GetResponseEvent), 'kernel.request', Object(Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher))
+#4 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2162): call_user_func(Array, Object(Symfony\Component\HttpKernel\Event\GetResponseEv in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/ArticleMailer.php on line 16
+[14-Mar-2017 18:58:22 UTC] PHP Fatal error:  Uncaught exception 'Symfony\Component\Routing\Exception\ResourceNotFoundException' in /home/ubuntu/workspace/Symfony/var/cache/prod/appProdUrlMatcher.php:596
+Stack trace:
+#0 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1357): appProdUrlMatcher->match('/bundles/app/cs...')
+#1 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1226): Symfony\Component\Routing\Matcher\UrlMatcher->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#2 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2362): Symfony\Component\Routing\Router->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#3 [internal function]: Symfony\Component\HttpKernel\EventListener\RouterListener->onKernelRequest(Object(Symfony\Component\HttpKernel\Event\GetResponseEvent), 'kernel.request', Object(Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher))
+#4 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2162): call_user_func(Array, Object(Symfony\Component\HttpKernel\Event\GetResponseEv in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/ArticleMailer.php on line 16
+[14-Mar-2017 18:59:21 UTC] PHP Fatal error:  Call to undefined method MM\PlatformBundle\Email\ArticleMailer::renderView() in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/ArticleMailer.php on line 31
+[14-Mar-2017 18:59:21 UTC] PHP Stack trace:
+[14-Mar-2017 18:59:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/Symfony/web/app_dev.php:0
+[14-Mar-2017 18:59:21 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/Symfony/web/app_dev.php:30
+[14-Mar-2017 18:59:21 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[14-Mar-2017 18:59:21 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:62
+[14-Mar-2017 18:59:21 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139}() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[14-Mar-2017 18:59:21 UTC] PHP   6. MM\PlatformBundle\Controller\ArticleController->addAction() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[14-Mar-2017 18:59:21 UTC] PHP   7. Doctrine\ORM\EntityManager->flush() /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Controller/ArticleController.php:156
+[14-Mar-2017 18:59:21 UTC] PHP   8. Doctrine\ORM\UnitOfWork->commit() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php:356
+[14-Mar-2017 18:59:21 UTC] PHP   9. Doctrine\ORM\UnitOfWork->executeInserts() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:378
+[14-Mar-2017 18:59:21 UTC] PHP  10. Doctrine\ORM\Event\ListenersInvoker->invoke() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:1035
+[14-Mar-2017 18:59:21 UTC] PHP  11. Symfony\Bridge\Doctrine\ContainerAwareEventManager->dispatchEvent() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/Event/ListenersInvoker.php:117
+[14-Mar-2017 18:59:21 UTC] PHP  12. MM\PlatformBundle\DoctrineListener\ArticleCreationListener->postPersist() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Bridge/Doctrine/ContainerAwareEventManager.php:63
+[14-Mar-2017 18:59:21 UTC] PHP  13. MM\PlatformBundle\Email\ArticleMailer->sendNewNotification() /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/DoctrineListener/ArticleCreationListener.php:29
+[14-Mar-2017 19:03:12 UTC] PHP Fatal error:  Call to undefined method appDevDebugProjectContainer::renderView() in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/ArticleMailer.php on line 31
+[14-Mar-2017 19:03:12 UTC] PHP Stack trace:
+[14-Mar-2017 19:03:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/Symfony/web/app_dev.php:0
+[14-Mar-2017 19:03:12 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/Symfony/web/app_dev.php:30
+[14-Mar-2017 19:03:12 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[14-Mar-2017 19:03:12 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:62
+[14-Mar-2017 19:03:12 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139}() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[14-Mar-2017 19:03:12 UTC] PHP   6. MM\PlatformBundle\Controller\ArticleController->addAction() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[14-Mar-2017 19:03:12 UTC] PHP   7. Doctrine\ORM\EntityManager->flush() /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Controller/ArticleController.php:156
+[14-Mar-2017 19:03:12 UTC] PHP   8. Doctrine\ORM\UnitOfWork->commit() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php:356
+[14-Mar-2017 19:03:12 UTC] PHP   9. Doctrine\ORM\UnitOfWork->executeInserts() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:378
+[14-Mar-2017 19:03:12 UTC] PHP  10. Doctrine\ORM\Event\ListenersInvoker->invoke() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:1035
+[14-Mar-2017 19:03:12 UTC] PHP  11. Symfony\Bridge\Doctrine\ContainerAwareEventManager->dispatchEvent() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/Event/ListenersInvoker.php:117
+[14-Mar-2017 19:03:12 UTC] PHP  12. MM\PlatformBundle\DoctrineListener\ArticleCreationListener->postPersist() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Bridge/Doctrine/ContainerAwareEventManager.php:63
+[14-Mar-2017 19:03:12 UTC] PHP  13. MM\PlatformBundle\Email\ArticleMailer->sendNewNotification() /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/DoctrineListener/ArticleCreationListener.php:29
+[14-Mar-2017 19:03:27 UTC] PHP Fatal error:  Call to undefined method appDevDebugProjectContainer::render() in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/ArticleMailer.php on line 31
+[14-Mar-2017 19:03:27 UTC] PHP Stack trace:
+[14-Mar-2017 19:03:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/Symfony/web/app_dev.php:0
+[14-Mar-2017 19:03:27 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/Symfony/web/app_dev.php:30
+[14-Mar-2017 19:03:27 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[14-Mar-2017 19:03:27 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:62
+[14-Mar-2017 19:03:27 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139}() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[14-Mar-2017 19:03:27 UTC] PHP   6. MM\PlatformBundle\Controller\ArticleController->addAction() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[14-Mar-2017 19:03:27 UTC] PHP   7. Doctrine\ORM\EntityManager->flush() /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Controller/ArticleController.php:156
+[14-Mar-2017 19:03:27 UTC] PHP   8. Doctrine\ORM\UnitOfWork->commit() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php:356
+[14-Mar-2017 19:03:27 UTC] PHP   9. Doctrine\ORM\UnitOfWork->executeInserts() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:378
+[14-Mar-2017 19:03:27 UTC] PHP  10. Doctrine\ORM\Event\ListenersInvoker->invoke() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:1035
+[14-Mar-2017 19:03:27 UTC] PHP  11. Symfony\Bridge\Doctrine\ContainerAwareEventManager->dispatchEvent() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/Event/ListenersInvoker.php:117
+[14-Mar-2017 19:03:27 UTC] PHP  12. MM\PlatformBundle\DoctrineListener\ArticleCreationListener->postPersist() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Bridge/Doctrine/ContainerAwareEventManager.php:63
+[14-Mar-2017 19:03:27 UTC] PHP  13. MM\PlatformBundle\Email\ArticleMailer->sendNewNotification() /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/DoctrineListener/ArticleCreationListener.php:29
+[14-Mar-2017 19:04:34 UTC] PHP Fatal error:  Uncaught exception 'Symfony\Component\Routing\Exception\ResourceNotFoundException' in /home/ubuntu/workspace/Symfony/var/cache/prod/appProdUrlMatcher.php:596
+Stack trace:
+#0 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1357): appProdUrlMatcher->match('/css/jquery.car...')
+#1 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1226): Symfony\Component\Routing\Matcher\UrlMatcher->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#2 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2362): Symfony\Component\Routing\Router->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#3 [internal function]: Symfony\Component\HttpKernel\EventListener\RouterListener->onKernelRequest(Object(Symfony\Component\HttpKernel\Event\GetResponseEvent), 'kernel.request', Object(Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher))
+#4 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2162): call_user_func(Array, Object(Symfony\Component\HttpKernel\Event\GetResponseEv in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/ArticleMailer.php on line 16
+[14-Mar-2017 19:09:06 UTC] PHP Fatal error:  Uncaught exception 'Symfony\Component\Routing\Exception\ResourceNotFoundException' in /home/ubuntu/workspace/Symfony/var/cache/prod/appProdUrlMatcher.php:596
+Stack trace:
+#0 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1357): appProdUrlMatcher->match('/css/jquery.car...')
+#1 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1226): Symfony\Component\Routing\Matcher\UrlMatcher->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#2 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2362): Symfony\Component\Routing\Router->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#3 [internal function]: Symfony\Component\HttpKernel\EventListener\RouterListener->onKernelRequest(Object(Symfony\Component\HttpKernel\Event\GetResponseEvent), 'kernel.request', Object(Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher))
+#4 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2162): call_user_func(Array, Object(Symfony\Component\HttpKernel\Event\GetResponseEv in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php on line 16
+[14-Mar-2017 19:09:25 UTC] PHP Fatal error:  Uncaught exception 'Symfony\Component\Routing\Exception\ResourceNotFoundException' in /home/ubuntu/workspace/Symfony/var/cache/prod/appProdUrlMatcher.php:596
+Stack trace:
+#0 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1357): appProdUrlMatcher->match('/css/jquery.car...')
+#1 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1226): Symfony\Component\Routing\Matcher\UrlMatcher->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#2 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2362): Symfony\Component\Routing\Router->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#3 [internal function]: Symfony\Component\HttpKernel\EventListener\RouterListener->onKernelRequest(Object(Symfony\Component\HttpKernel\Event\GetResponseEvent), 'kernel.request', Object(Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher))
+#4 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2162): call_user_func(Array, Object(Symfony\Component\HttpKernel\Event\GetResponseEv in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php on line 16
+[14-Mar-2017 19:09:28 UTC] PHP Fatal error:  Uncaught exception 'Symfony\Component\Routing\Exception\ResourceNotFoundException' in /home/ubuntu/workspace/Symfony/var/cache/prod/appProdUrlMatcher.php:596
+Stack trace:
+#0 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1357): appProdUrlMatcher->match('/css/jquery.car...')
+#1 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1226): Symfony\Component\Routing\Matcher\UrlMatcher->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#2 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2362): Symfony\Component\Routing\Router->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#3 [internal function]: Symfony\Component\HttpKernel\EventListener\RouterListener->onKernelRequest(Object(Symfony\Component\HttpKernel\Event\GetResponseEvent), 'kernel.request', Object(Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher))
+#4 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2162): call_user_func(Array, Object(Symfony\Component\HttpKernel\Event\GetResponseEv in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php on line 16
+[14-Mar-2017 19:09:31 UTC] PHP Fatal error:  Uncaught exception 'Symfony\Component\Routing\Exception\ResourceNotFoundException' in /home/ubuntu/workspace/Symfony/var/cache/prod/appProdUrlMatcher.php:596
+Stack trace:
+#0 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1357): appProdUrlMatcher->match('/css/jquery.car...')
+#1 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1226): Symfony\Component\Routing\Matcher\UrlMatcher->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#2 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2362): Symfony\Component\Routing\Router->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#3 [internal function]: Symfony\Component\HttpKernel\EventListener\RouterListener->onKernelRequest(Object(Symfony\Component\HttpKernel\Event\GetResponseEvent), 'kernel.request', Object(Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher))
+#4 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2162): call_user_func(Array, Object(Symfony\Component\HttpKernel\Event\GetResponseEv in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php on line 16
+[14-Mar-2017 19:09:32 UTC] PHP Fatal error:  Uncaught exception 'Symfony\Component\Routing\Exception\ResourceNotFoundException' in /home/ubuntu/workspace/Symfony/var/cache/prod/appProdUrlMatcher.php:596
+Stack trace:
+#0 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1357): appProdUrlMatcher->match('/bundles/app/cs...')
+#1 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1226): Symfony\Component\Routing\Matcher\UrlMatcher->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#2 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2362): Symfony\Component\Routing\Router->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#3 [internal function]: Symfony\Component\HttpKernel\EventListener\RouterListener->onKernelRequest(Object(Symfony\Component\HttpKernel\Event\GetResponseEvent), 'kernel.request', Object(Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher))
+#4 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2162): call_user_func(Array, Object(Symfony\Component\HttpKernel\Event\GetResponseEv in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php on line 16
+[14-Mar-2017 19:10:21 UTC] PHP Fatal error:  Uncaught exception 'Symfony\Component\Routing\Exception\ResourceNotFoundException' in /home/ubuntu/workspace/Symfony/var/cache/prod/appProdUrlMatcher.php:596
+Stack trace:
+#0 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1357): appProdUrlMatcher->match('/css/jquery.car...')
+#1 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1226): Symfony\Component\Routing\Matcher\UrlMatcher->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#2 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2362): Symfony\Component\Routing\Router->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#3 [internal function]: Symfony\Component\HttpKernel\EventListener\RouterListener->onKernelRequest(Object(Symfony\Component\HttpKernel\Event\GetResponseEvent), 'kernel.request', Object(Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher))
+#4 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2162): call_user_func(Array, Object(Symfony\Component\HttpKernel\Event\GetResponseEv in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php on line 16
+[14-Mar-2017 19:10:22 UTC] PHP Fatal error:  Uncaught exception 'Symfony\Component\Routing\Exception\ResourceNotFoundException' in /home/ubuntu/workspace/Symfony/var/cache/prod/appProdUrlMatcher.php:596
+Stack trace:
+#0 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1357): appProdUrlMatcher->match('/bundles/app/cs...')
+#1 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1226): Symfony\Component\Routing\Matcher\UrlMatcher->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#2 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2362): Symfony\Component\Routing\Router->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#3 [internal function]: Symfony\Component\HttpKernel\EventListener\RouterListener->onKernelRequest(Object(Symfony\Component\HttpKernel\Event\GetResponseEvent), 'kernel.request', Object(Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher))
+#4 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2162): call_user_func(Array, Object(Symfony\Component\HttpKernel\Event\GetResponseEv in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php on line 16
+[14-Mar-2017 19:11:12 UTC] PHP Fatal error:  Uncaught exception 'Symfony\Component\Routing\Exception\ResourceNotFoundException' in /home/ubuntu/workspace/Symfony/var/cache/prod/appProdUrlMatcher.php:596
+Stack trace:
+#0 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1357): appProdUrlMatcher->match('/bundles/app/cs...')
+#1 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1226): Symfony\Component\Routing\Matcher\UrlMatcher->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#2 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2362): Symfony\Component\Routing\Router->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#3 [internal function]: Symfony\Component\HttpKernel\EventListener\RouterListener->onKernelRequest(Object(Symfony\Component\HttpKernel\Event\GetResponseEvent), 'kernel.request', Object(Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher))
+#4 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2162): call_user_func(Array, Object(Symfony\Component\HttpKernel\Event\GetResponseEv in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php on line 16
+[14-Mar-2017 19:11:24 UTC] PHP Fatal error:  Uncaught exception 'Symfony\Component\Routing\Exception\ResourceNotFoundException' in /home/ubuntu/workspace/Symfony/var/cache/prod/appProdUrlMatcher.php:596
+Stack trace:
+#0 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1357): appProdUrlMatcher->match('/bundles/app/cs...')
+#1 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1226): Symfony\Component\Routing\Matcher\UrlMatcher->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#2 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2362): Symfony\Component\Routing\Router->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#3 [internal function]: Symfony\Component\HttpKernel\EventListener\RouterListener->onKernelRequest(Object(Symfony\Component\HttpKernel\Event\GetResponseEvent), 'kernel.request', Object(Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher))
+#4 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2162): call_user_func(Array, Object(Symfony\Component\HttpKernel\Event\GetResponseEv in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php on line 16
+[14-Mar-2017 19:11:26 UTC] PHP Fatal error:  Uncaught exception 'Symfony\Component\Routing\Exception\ResourceNotFoundException' in /home/ubuntu/workspace/Symfony/var/cache/prod/appProdUrlMatcher.php:596
+Stack trace:
+#0 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1357): appProdUrlMatcher->match('/css/jquery.car...')
+#1 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1226): Symfony\Component\Routing\Matcher\UrlMatcher->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#2 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2362): Symfony\Component\Routing\Router->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#3 [internal function]: Symfony\Component\HttpKernel\EventListener\RouterListener->onKernelRequest(Object(Symfony\Component\HttpKernel\Event\GetResponseEvent), 'kernel.request', Object(Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher))
+#4 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2162): call_user_func(Array, Object(Symfony\Component\HttpKernel\Event\GetResponseEv in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php on line 16
+[14-Mar-2017 19:11:27 UTC] PHP Fatal error:  Uncaught exception 'Symfony\Component\Routing\Exception\ResourceNotFoundException' in /home/ubuntu/workspace/Symfony/var/cache/prod/appProdUrlMatcher.php:596
+Stack trace:
+#0 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1357): appProdUrlMatcher->match('/css/jquery.car...')
+#1 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1226): Symfony\Component\Routing\Matcher\UrlMatcher->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#2 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2362): Symfony\Component\Routing\Router->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#3 [internal function]: Symfony\Component\HttpKernel\EventListener\RouterListener->onKernelRequest(Object(Symfony\Component\HttpKernel\Event\GetResponseEvent), 'kernel.request', Object(Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher))
+#4 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2162): call_user_func(Array, Object(Symfony\Component\HttpKernel\Event\GetResponseEv in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php on line 16
+[14-Mar-2017 19:11:27 UTC] PHP Fatal error:  Uncaught exception 'Symfony\Component\Routing\Exception\ResourceNotFoundException' in /home/ubuntu/workspace/Symfony/var/cache/prod/appProdUrlMatcher.php:596
+Stack trace:
+#0 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1357): appProdUrlMatcher->match('/bundles/app/cs...')
+#1 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1226): Symfony\Component\Routing\Matcher\UrlMatcher->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#2 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2362): Symfony\Component\Routing\Router->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#3 [internal function]: Symfony\Component\HttpKernel\EventListener\RouterListener->onKernelRequest(Object(Symfony\Component\HttpKernel\Event\GetResponseEvent), 'kernel.request', Object(Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher))
+#4 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2162): call_user_func(Array, Object(Symfony\Component\HttpKernel\Event\GetResponseEv in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php on line 16
+[14-Mar-2017 19:11:52 UTC] PHP Fatal error:  Uncaught exception 'Symfony\Component\Routing\Exception\ResourceNotFoundException' in /home/ubuntu/workspace/Symfony/var/cache/prod/appProdUrlMatcher.php:596
+Stack trace:
+#0 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1357): appProdUrlMatcher->match('/bundles/app/cs...')
+#1 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1226): Symfony\Component\Routing\Matcher\UrlMatcher->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#2 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2362): Symfony\Component\Routing\Router->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#3 [internal function]: Symfony\Component\HttpKernel\EventListener\RouterListener->onKernelRequest(Object(Symfony\Component\HttpKernel\Event\GetResponseEvent), 'kernel.request', Object(Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher))
+#4 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2162): call_user_func(Array, Object(Symfony\Component\HttpKernel\Event\GetResponseEv in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php on line 16
+[14-Mar-2017 19:11:59 UTC] PHP Fatal error:  Uncaught exception 'Symfony\Component\Routing\Exception\ResourceNotFoundException' in /home/ubuntu/workspace/Symfony/var/cache/prod/appProdUrlMatcher.php:596
+Stack trace:
+#0 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1357): appProdUrlMatcher->match('/css/jquery.car...')
+#1 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1226): Symfony\Component\Routing\Matcher\UrlMatcher->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#2 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2362): Symfony\Component\Routing\Router->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#3 [internal function]: Symfony\Component\HttpKernel\EventListener\RouterListener->onKernelRequest(Object(Symfony\Component\HttpKernel\Event\GetResponseEvent), 'kernel.request', Object(Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher))
+#4 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2162): call_user_func(Array, Object(Symfony\Component\HttpKernel\Event\GetResponseEv in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php on line 16
+[14-Mar-2017 19:15:49 UTC] PHP Fatal error:  Uncaught exception 'Symfony\Component\Routing\Exception\ResourceNotFoundException' in /home/ubuntu/workspace/Symfony/var/cache/prod/appProdUrlMatcher.php:596
+Stack trace:
+#0 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1357): appProdUrlMatcher->match('/css/jquery.car...')
+#1 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1226): Symfony\Component\Routing\Matcher\UrlMatcher->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#2 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2362): Symfony\Component\Routing\Router->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#3 [internal function]: Symfony\Component\HttpKernel\EventListener\RouterListener->onKernelRequest(Object(Symfony\Component\HttpKernel\Event\GetResponseEvent), 'kernel.request', Object(Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher))
+#4 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2162): call_user_func(Array, Object(Symfony\Component\HttpKernel\Event\GetResponseEv in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php on line 16
+[14-Mar-2017 19:16:24 UTC] PHP Fatal error:  Uncaught exception 'Symfony\Component\Routing\Exception\ResourceNotFoundException' in /home/ubuntu/workspace/Symfony/var/cache/prod/appProdUrlMatcher.php:596
+Stack trace:
+#0 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1357): appProdUrlMatcher->match('/css/jquery.car...')
+#1 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1226): Symfony\Component\Routing\Matcher\UrlMatcher->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#2 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2362): Symfony\Component\Routing\Router->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#3 [internal function]: Symfony\Component\HttpKernel\EventListener\RouterListener->onKernelRequest(Object(Symfony\Component\HttpKernel\Event\GetResponseEvent), 'kernel.request', Object(Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher))
+#4 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2162): call_user_func(Array, Object(Symfony\Component\HttpKernel\Event\GetResponseEv in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php on line 16
+[14-Mar-2017 19:18:07 UTC] PHP Fatal error:  Uncaught exception 'Symfony\Component\Routing\Exception\ResourceNotFoundException' in /home/ubuntu/workspace/Symfony/var/cache/prod/appProdUrlMatcher.php:596
+Stack trace:
+#0 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1357): appProdUrlMatcher->match('/css/jquery.car...')
+#1 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1226): Symfony\Component\Routing\Matcher\UrlMatcher->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#2 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2362): Symfony\Component\Routing\Router->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#3 [internal function]: Symfony\Component\HttpKernel\EventListener\RouterListener->onKernelRequest(Object(Symfony\Component\HttpKernel\Event\GetResponseEvent), 'kernel.request', Object(Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher))
+#4 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2162): call_user_func(Array, Object(Symfony\Component\HttpKernel\Event\GetResponseEv in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php on line 16
+[14-Mar-2017 19:20:08 UTC] PHP Fatal error:  Uncaught exception 'Symfony\Component\Routing\Exception\ResourceNotFoundException' in /home/ubuntu/workspace/Symfony/var/cache/prod/appProdUrlMatcher.php:596
+Stack trace:
+#0 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1357): appProdUrlMatcher->match('/css/jquery.car...')
+#1 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1226): Symfony\Component\Routing\Matcher\UrlMatcher->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#2 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2362): Symfony\Component\Routing\Router->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#3 [internal function]: Symfony\Component\HttpKernel\EventListener\RouterListener->onKernelRequest(Object(Symfony\Component\HttpKernel\Event\GetResponseEvent), 'kernel.request', Object(Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher))
+#4 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2162): call_user_func(Array, Object(Symfony\Component\HttpKernel\Event\GetResponseEv in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php on line 16
+[14-Mar-2017 19:20:19 UTC] PHP Fatal error:  Uncaught exception 'Symfony\Component\Routing\Exception\ResourceNotFoundException' in /home/ubuntu/workspace/Symfony/var/cache/prod/appProdUrlMatcher.php:596
+Stack trace:
+#0 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1357): appProdUrlMatcher->match('/css/jquery.car...')
+#1 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1226): Symfony\Component\Routing\Matcher\UrlMatcher->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#2 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2362): Symfony\Component\Routing\Router->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#3 [internal function]: Symfony\Component\HttpKernel\EventListener\RouterListener->onKernelRequest(Object(Symfony\Component\HttpKernel\Event\GetResponseEvent), 'kernel.request', Object(Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher))
+#4 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2162): call_user_func(Array, Object(Symfony\Component\HttpKernel\Event\GetResponseEv in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php on line 16
+[14-Mar-2017 19:20:34 UTC] PHP Fatal error:  Uncaught exception 'Symfony\Component\Routing\Exception\ResourceNotFoundException' in /home/ubuntu/workspace/Symfony/var/cache/prod/appProdUrlMatcher.php:596
+Stack trace:
+#0 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1357): appProdUrlMatcher->match('/css/jquery.car...')
+#1 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1226): Symfony\Component\Routing\Matcher\UrlMatcher->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#2 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2362): Symfony\Component\Routing\Router->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#3 [internal function]: Symfony\Component\HttpKernel\EventListener\RouterListener->onKernelRequest(Object(Symfony\Component\HttpKernel\Event\GetResponseEvent), 'kernel.request', Object(Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher))
+#4 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2162): call_user_func(Array, Object(Symfony\Component\HttpKernel\Event\GetResponseEv in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php on line 16
+[14-Mar-2017 19:20:50 UTC] PHP Fatal error:  Uncaught exception 'Symfony\Component\Routing\Exception\ResourceNotFoundException' in /home/ubuntu/workspace/Symfony/var/cache/prod/appProdUrlMatcher.php:596
+Stack trace:
+#0 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1357): appProdUrlMatcher->match('/css/jquery.car...')
+#1 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1226): Symfony\Component\Routing\Matcher\UrlMatcher->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#2 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2362): Symfony\Component\Routing\Router->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#3 [internal function]: Symfony\Component\HttpKernel\EventListener\RouterListener->onKernelRequest(Object(Symfony\Component\HttpKernel\Event\GetResponseEvent), 'kernel.request', Object(Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher))
+#4 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2162): call_user_func(Array, Object(Symfony\Component\HttpKernel\Event\GetResponseEv in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php on line 16
+[14-Mar-2017 19:20:51 UTC] PHP Fatal error:  Uncaught exception 'Symfony\Component\Routing\Exception\ResourceNotFoundException' in /home/ubuntu/workspace/Symfony/var/cache/prod/appProdUrlMatcher.php:596
+Stack trace:
+#0 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1357): appProdUrlMatcher->match('/css/jquery.car...')
+#1 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1226): Symfony\Component\Routing\Matcher\UrlMatcher->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#2 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2362): Symfony\Component\Routing\Router->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#3 [internal function]: Symfony\Component\HttpKernel\EventListener\RouterListener->onKernelRequest(Object(Symfony\Component\HttpKernel\Event\GetResponseEvent), 'kernel.request', Object(Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher))
+#4 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2162): call_user_func(Array, Object(Symfony\Component\HttpKernel\Event\GetResponseEv in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php on line 16
+[14-Mar-2017 19:20:52 UTC] PHP Fatal error:  Uncaught exception 'Symfony\Component\Routing\Exception\ResourceNotFoundException' in /home/ubuntu/workspace/Symfony/var/cache/prod/appProdUrlMatcher.php:596
+Stack trace:
+#0 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1357): appProdUrlMatcher->match('/css/jquery.car...')
+#1 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1226): Symfony\Component\Routing\Matcher\UrlMatcher->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#2 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2362): Symfony\Component\Routing\Router->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#3 [internal function]: Symfony\Component\HttpKernel\EventListener\RouterListener->onKernelRequest(Object(Symfony\Component\HttpKernel\Event\GetResponseEvent), 'kernel.request', Object(Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher))
+#4 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2162): call_user_func(Array, Object(Symfony\Component\HttpKernel\Event\GetResponseEv in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php on line 16
+[14-Mar-2017 19:21:04 UTC] PHP Fatal error:  Call to undefined method MM\PlatformBundle\Entity\Comment::getArticle() in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php on line 29
+[14-Mar-2017 19:21:04 UTC] PHP Stack trace:
+[14-Mar-2017 19:21:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/Symfony/web/app_dev.php:0
+[14-Mar-2017 19:21:04 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/Symfony/web/app_dev.php:30
+[14-Mar-2017 19:21:04 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[14-Mar-2017 19:21:04 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:62
+[14-Mar-2017 19:21:04 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139}() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[14-Mar-2017 19:21:04 UTC] PHP   6. FOS\CommentBundle\Controller\ThreadController->postThreadCommentsAction() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[14-Mar-2017 19:21:04 UTC] PHP   7. FOS\CommentBundle\Model\CommentManager->saveComment() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Controller/ThreadController.php:492
+[14-Mar-2017 19:21:04 UTC] PHP   8. FOS\CommentBundle\Entity\CommentManager->doSaveComment() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Model/CommentManager.php:136
+[14-Mar-2017 19:21:04 UTC] PHP   9. Doctrine\ORM\EntityManager->flush() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Entity/CommentManager.php:128
+[14-Mar-2017 19:21:04 UTC] PHP  10. Doctrine\ORM\UnitOfWork->commit() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php:356
+[14-Mar-2017 19:21:04 UTC] PHP  11. Doctrine\ORM\UnitOfWork->executeInserts() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:378
+[14-Mar-2017 19:21:04 UTC] PHP  12. Doctrine\ORM\Event\ListenersInvoker->invoke() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:1035
+[14-Mar-2017 19:21:04 UTC] PHP  13. Symfony\Bridge\Doctrine\ContainerAwareEventManager->dispatchEvent() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/Event/ListenersInvoker.php:117
+[14-Mar-2017 19:21:04 UTC] PHP  14. MM\PlatformBundle\DoctrineListener\CommentCreationListener->postPersist() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Bridge/Doctrine/ContainerAwareEventManager.php:63
+[14-Mar-2017 19:21:04 UTC] PHP  15. MM\PlatformBundle\Email\CommentMailer->sendNewNotification() /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/DoctrineListener/CommentCreationListener.php:29
+[14-Mar-2017 19:22:48 UTC] PHP Fatal error:  Uncaught exception 'Symfony\Component\Routing\Exception\ResourceNotFoundException' in /home/ubuntu/workspace/Symfony/var/cache/prod/appProdUrlMatcher.php:596
+Stack trace:
+#0 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1357): appProdUrlMatcher->match('/css/jquery.car...')
+#1 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1226): Symfony\Component\Routing\Matcher\UrlMatcher->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#2 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2362): Symfony\Component\Routing\Router->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#3 [internal function]: Symfony\Component\HttpKernel\EventListener\RouterListener->onKernelRequest(Object(Symfony\Component\HttpKernel\Event\GetResponseEvent), 'kernel.request', Object(Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher))
+#4 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2162): call_user_func(Array, Object(Symfony\Component\HttpKernel\Event\GetResponseEv in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php on line 16
+[14-Mar-2017 19:23:03 UTC] PHP Fatal error:  Call to undefined method MM\PlatformBundle\Entity\Comment::getArticle() in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php on line 34
+[14-Mar-2017 19:23:03 UTC] PHP Stack trace:
+[14-Mar-2017 19:23:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/Symfony/web/app_dev.php:0
+[14-Mar-2017 19:23:03 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/Symfony/web/app_dev.php:30
+[14-Mar-2017 19:23:03 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[14-Mar-2017 19:23:03 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:62
+[14-Mar-2017 19:23:03 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139}() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[14-Mar-2017 19:23:03 UTC] PHP   6. FOS\CommentBundle\Controller\ThreadController->postThreadCommentsAction() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[14-Mar-2017 19:23:03 UTC] PHP   7. FOS\CommentBundle\Model\CommentManager->saveComment() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Controller/ThreadController.php:492
+[14-Mar-2017 19:23:03 UTC] PHP   8. FOS\CommentBundle\Entity\CommentManager->doSaveComment() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Model/CommentManager.php:136
+[14-Mar-2017 19:23:03 UTC] PHP   9. Doctrine\ORM\EntityManager->flush() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Entity/CommentManager.php:128
+[14-Mar-2017 19:23:03 UTC] PHP  10. Doctrine\ORM\UnitOfWork->commit() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php:356
+[14-Mar-2017 19:23:03 UTC] PHP  11. Doctrine\ORM\UnitOfWork->executeInserts() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:378
+[14-Mar-2017 19:23:03 UTC] PHP  12. Doctrine\ORM\Event\ListenersInvoker->invoke() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:1035
+[14-Mar-2017 19:23:03 UTC] PHP  13. Symfony\Bridge\Doctrine\ContainerAwareEventManager->dispatchEvent() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/Event/ListenersInvoker.php:117
+[14-Mar-2017 19:23:03 UTC] PHP  14. MM\PlatformBundle\DoctrineListener\CommentCreationListener->postPersist() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Bridge/Doctrine/ContainerAwareEventManager.php:63
+[14-Mar-2017 19:23:03 UTC] PHP  15. MM\PlatformBundle\Email\CommentMailer->sendNewNotification() /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/DoctrineListener/CommentCreationListener.php:29
+[14-Mar-2017 19:30:45 UTC] PHP Fatal error:  Uncaught exception 'Symfony\Component\Routing\Exception\ResourceNotFoundException' in /home/ubuntu/workspace/Symfony/var/cache/prod/appProdUrlMatcher.php:596
+Stack trace:
+#0 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1357): appProdUrlMatcher->match('/css/jquery.car...')
+#1 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1226): Symfony\Component\Routing\Matcher\UrlMatcher->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#2 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2362): Symfony\Component\Routing\Router->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#3 [internal function]: Symfony\Component\HttpKernel\EventListener\RouterListener->onKernelRequest(Object(Symfony\Component\HttpKernel\Event\GetResponseEvent), 'kernel.request', Object(Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher))
+#4 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2162): call_user_func(Array, Object(Symfony\Component\HttpKernel\Event\GetResponseEv in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php on line 16
+[14-Mar-2017 19:31:05 UTC] PHP Fatal error:  Call to undefined method MM\PlatformBundle\Entity\Comment::getContent() in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php on line 34
+[14-Mar-2017 19:31:05 UTC] PHP Stack trace:
+[14-Mar-2017 19:31:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/Symfony/web/app_dev.php:0
+[14-Mar-2017 19:31:05 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/Symfony/web/app_dev.php:30
+[14-Mar-2017 19:31:05 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[14-Mar-2017 19:31:05 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:62
+[14-Mar-2017 19:31:05 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139}() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[14-Mar-2017 19:31:05 UTC] PHP   6. FOS\CommentBundle\Controller\ThreadController->postThreadCommentsAction() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[14-Mar-2017 19:31:05 UTC] PHP   7. FOS\CommentBundle\Model\CommentManager->saveComment() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Controller/ThreadController.php:492
+[14-Mar-2017 19:31:05 UTC] PHP   8. FOS\CommentBundle\Entity\CommentManager->doSaveComment() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Model/CommentManager.php:136
+[14-Mar-2017 19:31:05 UTC] PHP   9. Doctrine\ORM\EntityManager->flush() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Entity/CommentManager.php:128
+[14-Mar-2017 19:31:05 UTC] PHP  10. Doctrine\ORM\UnitOfWork->commit() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php:356
+[14-Mar-2017 19:31:05 UTC] PHP  11. Doctrine\ORM\UnitOfWork->executeInserts() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:378
+[14-Mar-2017 19:31:05 UTC] PHP  12. Doctrine\ORM\Event\ListenersInvoker->invoke() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:1035
+[14-Mar-2017 19:31:05 UTC] PHP  13. Symfony\Bridge\Doctrine\ContainerAwareEventManager->dispatchEvent() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/Event/ListenersInvoker.php:117
+[14-Mar-2017 19:31:05 UTC] PHP  14. MM\PlatformBundle\DoctrineListener\CommentCreationListener->postPersist() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Bridge/Doctrine/ContainerAwareEventManager.php:63
+[14-Mar-2017 19:31:05 UTC] PHP  15. MM\PlatformBundle\Email\CommentMailer->sendNewNotification() /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/DoctrineListener/CommentCreationListener.php:29
+[14-Mar-2017 19:31:24 UTC] PHP Fatal error:  Uncaught exception 'Symfony\Component\Routing\Exception\ResourceNotFoundException' in /home/ubuntu/workspace/Symfony/var/cache/prod/appProdUrlMatcher.php:596
+Stack trace:
+#0 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1357): appProdUrlMatcher->match('/css/jquery.car...')
+#1 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(1226): Symfony\Component\Routing\Matcher\UrlMatcher->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#2 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2362): Symfony\Component\Routing\Router->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#3 [internal function]: Symfony\Component\HttpKernel\EventListener\RouterListener->onKernelRequest(Object(Symfony\Component\HttpKernel\Event\GetResponseEvent), 'kernel.request', Object(Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher))
+#4 /home/ubuntu/workspace/Symfony/var/cache/prod/classes.php(2162): call_user_func(Array, Object(Symfony\Component\HttpKernel\Event\GetResponseEv in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php on line 16
+[18-Mar-2017 10:02:00 UTC] PHP Fatal error:  Uncaught exception 'Symfony\Component\Debug\Exception\ContextErrorException' with message 'Catchable Fatal Error: Argument 2 passed to MM\PlatformBundle\Email\CommentMailer::__construct() must implement interface Symfony\Component\DependencyInjection\ContainerInterface, none given, called in /home/ubuntu/workspace/Symfony/var/cache/prod/appProdProjectContainer.php on line 1074 and defined' in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php(16): Symfony\Component\Debug\ErrorHandler->handleError(4096, 'Argument 2 pass...', '/home/ubuntu/wo...', 16, Array)
+#1 /home/ubuntu/workspace/Symfony/var/cache/prod/appProdProjectContainer.php(1074): MM\PlatformBundle\Email\CommentMailer->__construct(Object(Swift_Mailer))
+#2 /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Container.php(273): appProdProjectContainer->getMmPlatform_Email_CommentMailerServi in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php on line 16
+[18-Mar-2017 21:30:13 UTC] PHP Fatal error:  Call to undefined method MM\PlatformBundle\Email\CommentMailer::getDoctrine() in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php on line 26
+[18-Mar-2017 21:30:13 UTC] PHP Stack trace:
+[18-Mar-2017 21:30:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/Symfony/web/app.php:0
+[18-Mar-2017 21:30:13 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/Symfony/web/app.php:18
+[18-Mar-2017 21:30:13 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[18-Mar-2017 21:30:13 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:62
+[18-Mar-2017 21:30:13 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139}() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[18-Mar-2017 21:30:13 UTC] PHP   6. FOS\CommentBundle\Controller\ThreadController->postThreadCommentsAction() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[18-Mar-2017 21:30:13 UTC] PHP   7. FOS\CommentBundle\Model\CommentManager->saveComment() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Controller/ThreadController.php:492
+[18-Mar-2017 21:30:13 UTC] PHP   8. FOS\CommentBundle\Entity\CommentManager->doSaveComment() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Model/CommentManager.php:136
+[18-Mar-2017 21:30:13 UTC] PHP   9. Doctrine\ORM\EntityManager->flush() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Entity/CommentManager.php:128
+[18-Mar-2017 21:30:13 UTC] PHP  10. Doctrine\ORM\UnitOfWork->commit() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php:356
+[18-Mar-2017 21:30:13 UTC] PHP  11. Doctrine\ORM\UnitOfWork->executeInserts() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:378
+[18-Mar-2017 21:30:13 UTC] PHP  12. Doctrine\ORM\Event\ListenersInvoker->invoke() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:1035
+[18-Mar-2017 21:30:13 UTC] PHP  13. Symfony\Bridge\Doctrine\ContainerAwareEventManager->dispatchEvent() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/Event/ListenersInvoker.php:117
+[18-Mar-2017 21:30:13 UTC] PHP  14. MM\PlatformBundle\DoctrineListener\CommentCreationListener->postPersist() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Bridge/Doctrine/ContainerAwareEventManager.php:63
+[18-Mar-2017 21:30:13 UTC] PHP  15. MM\PlatformBundle\Email\CommentMailer->sendNewNotification() /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/DoctrineListener/CommentCreationListener.php:29
+[18-Mar-2017 21:30:55 UTC] PHP Fatal error:  Call to undefined method appProdProjectContainer::getDoctrine() in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php on line 27
+[18-Mar-2017 21:30:55 UTC] PHP Stack trace:
+[18-Mar-2017 21:30:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/Symfony/web/app.php:0
+[18-Mar-2017 21:30:55 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/Symfony/web/app.php:18
+[18-Mar-2017 21:30:55 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[18-Mar-2017 21:30:55 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:62
+[18-Mar-2017 21:30:55 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139}() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[18-Mar-2017 21:30:55 UTC] PHP   6. FOS\CommentBundle\Controller\ThreadController->postThreadCommentsAction() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[18-Mar-2017 21:30:55 UTC] PHP   7. FOS\CommentBundle\Model\CommentManager->saveComment() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Controller/ThreadController.php:492
+[18-Mar-2017 21:30:55 UTC] PHP   8. FOS\CommentBundle\Entity\CommentManager->doSaveComment() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Model/CommentManager.php:136
+[18-Mar-2017 21:30:55 UTC] PHP   9. Doctrine\ORM\EntityManager->flush() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Entity/CommentManager.php:128
+[18-Mar-2017 21:30:55 UTC] PHP  10. Doctrine\ORM\UnitOfWork->commit() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php:356
+[18-Mar-2017 21:30:55 UTC] PHP  11. Doctrine\ORM\UnitOfWork->executeInserts() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:378
+[18-Mar-2017 21:30:55 UTC] PHP  12. Doctrine\ORM\Event\ListenersInvoker->invoke() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:1035
+[18-Mar-2017 21:30:55 UTC] PHP  13. Symfony\Bridge\Doctrine\ContainerAwareEventManager->dispatchEvent() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/Event/ListenersInvoker.php:117
+[18-Mar-2017 21:30:55 UTC] PHP  14. MM\PlatformBundle\DoctrineListener\CommentCreationListener->postPersist() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Bridge/Doctrine/ContainerAwareEventManager.php:63
+[18-Mar-2017 21:30:55 UTC] PHP  15. MM\PlatformBundle\Email\CommentMailer->sendNewNotification() /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/DoctrineListener/CommentCreationListener.php:29
+[18-Mar-2017 21:31:50 UTC] PHP Fatal error:  Call to undefined method appDevDebugProjectContainer::getDoctrine() in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php on line 27
+[18-Mar-2017 21:31:50 UTC] PHP Stack trace:
+[18-Mar-2017 21:31:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/Symfony/web/app_dev.php:0
+[18-Mar-2017 21:31:50 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/Symfony/web/app_dev.php:30
+[18-Mar-2017 21:31:50 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[18-Mar-2017 21:31:50 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:62
+[18-Mar-2017 21:31:50 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139}() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[18-Mar-2017 21:31:50 UTC] PHP   6. FOS\CommentBundle\Controller\ThreadController->postThreadCommentsAction() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[18-Mar-2017 21:31:50 UTC] PHP   7. FOS\CommentBundle\Model\CommentManager->saveComment() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Controller/ThreadController.php:492
+[18-Mar-2017 21:31:50 UTC] PHP   8. FOS\CommentBundle\Entity\CommentManager->doSaveComment() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Model/CommentManager.php:136
+[18-Mar-2017 21:31:50 UTC] PHP   9. Doctrine\ORM\EntityManager->flush() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Entity/CommentManager.php:128
+[18-Mar-2017 21:31:50 UTC] PHP  10. Doctrine\ORM\UnitOfWork->commit() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php:356
+[18-Mar-2017 21:31:50 UTC] PHP  11. Doctrine\ORM\UnitOfWork->executeInserts() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:378
+[18-Mar-2017 21:31:50 UTC] PHP  12. Doctrine\ORM\Event\ListenersInvoker->invoke() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:1035
+[18-Mar-2017 21:31:50 UTC] PHP  13. Symfony\Bridge\Doctrine\ContainerAwareEventManager->dispatchEvent() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/Event/ListenersInvoker.php:117
+[18-Mar-2017 21:31:50 UTC] PHP  14. MM\PlatformBundle\DoctrineListener\CommentCreationListener->postPersist() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Bridge/Doctrine/ContainerAwareEventManager.php:63
+[18-Mar-2017 21:31:50 UTC] PHP  15. MM\PlatformBundle\Email\CommentMailer->sendNewNotification() /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/DoctrineListener/CommentCreationListener.php:29
+[18-Mar-2017 21:37:13 UTC] PHP Fatal error:  Call to undefined function MM\PlatformBundle\Entity\getPermalink() in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Entity/Thread.php on line 24
+[18-Mar-2017 21:37:13 UTC] PHP Stack trace:
+[18-Mar-2017 21:37:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/Symfony/web/app_dev.php:0
+[18-Mar-2017 21:37:13 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/Symfony/web/app_dev.php:30
+[18-Mar-2017 21:37:13 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[18-Mar-2017 21:37:13 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:62
+[18-Mar-2017 21:37:13 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139}() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[18-Mar-2017 21:37:13 UTC] PHP   6. FOS\CommentBundle\Controller\ThreadController->postThreadCommentsAction() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[18-Mar-2017 21:37:13 UTC] PHP   7. FOS\CommentBundle\Model\CommentManager->saveComment() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Controller/ThreadController.php:492
+[18-Mar-2017 21:37:13 UTC] PHP   8. FOS\CommentBundle\Entity\CommentManager->doSaveComment() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Model/CommentManager.php:136
+[18-Mar-2017 21:37:13 UTC] PHP   9. Doctrine\ORM\EntityManager->flush() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Entity/CommentManager.php:128
+[18-Mar-2017 21:37:13 UTC] PHP  10. Doctrine\ORM\UnitOfWork->commit() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php:356
+[18-Mar-2017 21:37:13 UTC] PHP  11. Doctrine\ORM\UnitOfWork->executeInserts() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:378
+[18-Mar-2017 21:37:13 UTC] PHP  12. Doctrine\ORM\Event\ListenersInvoker->invoke() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:1035
+[18-Mar-2017 21:37:13 UTC] PHP  13. Symfony\Bridge\Doctrine\ContainerAwareEventManager->dispatchEvent() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/Event/ListenersInvoker.php:117
+[18-Mar-2017 21:37:13 UTC] PHP  14. MM\PlatformBundle\DoctrineListener\CommentCreationListener->postPersist() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Bridge/Doctrine/ContainerAwareEventManager.php:63
+[18-Mar-2017 21:37:13 UTC] PHP  15. MM\PlatformBundle\Email\CommentMailer->sendNewNotification() /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/DoctrineListener/CommentCreationListener.php:29
+[18-Mar-2017 21:37:13 UTC] PHP  16. MM\PlatformBundle\Repository\ArticleRepository->findByComment() /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php:32
+[18-Mar-2017 21:37:13 UTC] PHP  17. MM\PlatformBundle\Entity\Thread->getArticleId() /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Repository/ArticleRepository.php:50
+[18-Mar-2017 21:38:12 UTC] PHP Fatal error:  Call to a member function getAuthor() on a non-object in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php on line 37
+[18-Mar-2017 21:38:12 UTC] PHP Stack trace:
+[18-Mar-2017 21:38:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/Symfony/web/app_dev.php:0
+[18-Mar-2017 21:38:12 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/Symfony/web/app_dev.php:30
+[18-Mar-2017 21:38:12 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[18-Mar-2017 21:38:12 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:62
+[18-Mar-2017 21:38:12 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139}() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[18-Mar-2017 21:38:12 UTC] PHP   6. FOS\CommentBundle\Controller\ThreadController->postThreadCommentsAction() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[18-Mar-2017 21:38:12 UTC] PHP   7. FOS\CommentBundle\Model\CommentManager->saveComment() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Controller/ThreadController.php:492
+[18-Mar-2017 21:38:12 UTC] PHP   8. FOS\CommentBundle\Entity\CommentManager->doSaveComment() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Model/CommentManager.php:136
+[18-Mar-2017 21:38:12 UTC] PHP   9. Doctrine\ORM\EntityManager->flush() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Entity/CommentManager.php:128
+[18-Mar-2017 21:38:12 UTC] PHP  10. Doctrine\ORM\UnitOfWork->commit() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php:356
+[18-Mar-2017 21:38:12 UTC] PHP  11. Doctrine\ORM\UnitOfWork->executeInserts() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:378
+[18-Mar-2017 21:38:12 UTC] PHP  12. Doctrine\ORM\Event\ListenersInvoker->invoke() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:1035
+[18-Mar-2017 21:38:12 UTC] PHP  13. Symfony\Bridge\Doctrine\ContainerAwareEventManager->dispatchEvent() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/Event/ListenersInvoker.php:117
+[18-Mar-2017 21:38:12 UTC] PHP  14. MM\PlatformBundle\DoctrineListener\CommentCreationListener->postPersist() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Bridge/Doctrine/ContainerAwareEventManager.php:63
+[18-Mar-2017 21:38:12 UTC] PHP  15. MM\PlatformBundle\Email\CommentMailer->sendNewNotification() /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/DoctrineListener/CommentCreationListener.php:29
+[18-Mar-2017 21:39:39 UTC] PHP Fatal error:  Call to a member function getAuthor() on a non-object in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php on line 38
+[18-Mar-2017 21:39:39 UTC] PHP Stack trace:
+[18-Mar-2017 21:39:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/Symfony/web/app_dev.php:0
+[18-Mar-2017 21:39:39 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/Symfony/web/app_dev.php:30
+[18-Mar-2017 21:39:39 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[18-Mar-2017 21:39:39 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:62
+[18-Mar-2017 21:39:39 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139}() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[18-Mar-2017 21:39:39 UTC] PHP   6. FOS\CommentBundle\Controller\ThreadController->postThreadCommentsAction() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[18-Mar-2017 21:39:39 UTC] PHP   7. FOS\CommentBundle\Model\CommentManager->saveComment() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Controller/ThreadController.php:492
+[18-Mar-2017 21:39:39 UTC] PHP   8. FOS\CommentBundle\Entity\CommentManager->doSaveComment() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Model/CommentManager.php:136
+[18-Mar-2017 21:39:39 UTC] PHP   9. Doctrine\ORM\EntityManager->flush() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Entity/CommentManager.php:128
+[18-Mar-2017 21:39:39 UTC] PHP  10. Doctrine\ORM\UnitOfWork->commit() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php:356
+[18-Mar-2017 21:39:39 UTC] PHP  11. Doctrine\ORM\UnitOfWork->executeInserts() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:378
+[18-Mar-2017 21:39:39 UTC] PHP  12. Doctrine\ORM\Event\ListenersInvoker->invoke() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:1035
+[18-Mar-2017 21:39:39 UTC] PHP  13. Symfony\Bridge\Doctrine\ContainerAwareEventManager->dispatchEvent() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/Event/ListenersInvoker.php:117
+[18-Mar-2017 21:39:39 UTC] PHP  14. MM\PlatformBundle\DoctrineListener\CommentCreationListener->postPersist() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Bridge/Doctrine/ContainerAwareEventManager.php:63
+[18-Mar-2017 21:39:39 UTC] PHP  15. MM\PlatformBundle\Email\CommentMailer->sendNewNotification() /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/DoctrineListener/CommentCreationListener.php:29
+[18-Mar-2017 21:41:53 UTC] PHP Fatal error:  Unsupported operand types in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Entity/Thread.php on line 25
+[18-Mar-2017 21:41:53 UTC] PHP Stack trace:
+[18-Mar-2017 21:41:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/Symfony/web/app_dev.php:0
+[18-Mar-2017 21:41:53 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/Symfony/web/app_dev.php:30
+[18-Mar-2017 21:41:53 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[18-Mar-2017 21:41:53 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:62
+[18-Mar-2017 21:41:53 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139}() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[18-Mar-2017 21:41:53 UTC] PHP   6. FOS\CommentBundle\Controller\ThreadController->postThreadCommentsAction() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[18-Mar-2017 21:41:53 UTC] PHP   7. FOS\CommentBundle\Model\CommentManager->saveComment() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Controller/ThreadController.php:492
+[18-Mar-2017 21:41:53 UTC] PHP   8. FOS\CommentBundle\Entity\CommentManager->doSaveComment() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Model/CommentManager.php:136
+[18-Mar-2017 21:41:53 UTC] PHP   9. Doctrine\ORM\EntityManager->flush() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Entity/CommentManager.php:128
+[18-Mar-2017 21:41:53 UTC] PHP  10. Doctrine\ORM\UnitOfWork->commit() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php:356
+[18-Mar-2017 21:41:53 UTC] PHP  11. Doctrine\ORM\UnitOfWork->executeInserts() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:378
+[18-Mar-2017 21:41:53 UTC] PHP  12. Doctrine\ORM\Event\ListenersInvoker->invoke() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:1035
+[18-Mar-2017 21:41:53 UTC] PHP  13. Symfony\Bridge\Doctrine\ContainerAwareEventManager->dispatchEvent() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/Event/ListenersInvoker.php:117
+[18-Mar-2017 21:41:53 UTC] PHP  14. MM\PlatformBundle\DoctrineListener\CommentCreationListener->postPersist() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Bridge/Doctrine/ContainerAwareEventManager.php:63
+[18-Mar-2017 21:41:53 UTC] PHP  15. MM\PlatformBundle\Email\CommentMailer->sendNewNotification() /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/DoctrineListener/CommentCreationListener.php:29
+[18-Mar-2017 21:41:53 UTC] PHP  16. MM\PlatformBundle\Repository\ArticleRepository->findByComment() /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php:32
+[18-Mar-2017 21:41:53 UTC] PHP  17. MM\PlatformBundle\Entity\Thread->getArticleId() /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Repository/ArticleRepository.php:50
+[19-Mar-2017 09:34:37 UTC] PHP Fatal error:  Unsupported operand types in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Entity/Thread.php on line 25
+[19-Mar-2017 09:34:37 UTC] PHP Stack trace:
+[19-Mar-2017 09:34:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/Symfony/web/app_dev.php:0
+[19-Mar-2017 09:34:37 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/Symfony/web/app_dev.php:30
+[19-Mar-2017 09:34:37 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[19-Mar-2017 09:34:37 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:62
+[19-Mar-2017 09:34:37 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139}() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[19-Mar-2017 09:34:37 UTC] PHP   6. FOS\CommentBundle\Controller\ThreadController->postThreadCommentsAction() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[19-Mar-2017 09:34:37 UTC] PHP   7. FOS\CommentBundle\Model\CommentManager->saveComment() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Controller/ThreadController.php:492
+[19-Mar-2017 09:34:37 UTC] PHP   8. FOS\CommentBundle\Entity\CommentManager->doSaveComment() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Model/CommentManager.php:136
+[19-Mar-2017 09:34:37 UTC] PHP   9. Doctrine\ORM\EntityManager->flush() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Entity/CommentManager.php:128
+[19-Mar-2017 09:34:37 UTC] PHP  10. Doctrine\ORM\UnitOfWork->commit() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php:356
+[19-Mar-2017 09:34:37 UTC] PHP  11. Doctrine\ORM\UnitOfWork->executeInserts() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:378
+[19-Mar-2017 09:34:37 UTC] PHP  12. Doctrine\ORM\Event\ListenersInvoker->invoke() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:1035
+[19-Mar-2017 09:34:37 UTC] PHP  13. Symfony\Bridge\Doctrine\ContainerAwareEventManager->dispatchEvent() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/Event/ListenersInvoker.php:117
+[19-Mar-2017 09:34:37 UTC] PHP  14. MM\PlatformBundle\DoctrineListener\CommentCreationListener->postPersist() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Bridge/Doctrine/ContainerAwareEventManager.php:63
+[19-Mar-2017 09:34:37 UTC] PHP  15. MM\PlatformBundle\Email\CommentMailer->sendNewNotification() /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/DoctrineListener/CommentCreationListener.php:29
+[19-Mar-2017 09:34:37 UTC] PHP  16. MM\PlatformBundle\Repository\ArticleRepository->findByComment() /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php:32
+[19-Mar-2017 09:34:37 UTC] PHP  17. MM\PlatformBundle\Entity\Thread->getArticleId() /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Repository/ArticleRepository.php:50
+[19-Mar-2017 09:35:09 UTC] PHP Fatal error:  Call to a member function getAuthor() on a non-object in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php on line 38
+[19-Mar-2017 09:35:09 UTC] PHP Stack trace:
+[19-Mar-2017 09:35:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/Symfony/web/app_dev.php:0
+[19-Mar-2017 09:35:09 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/Symfony/web/app_dev.php:30
+[19-Mar-2017 09:35:09 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[19-Mar-2017 09:35:09 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:62
+[19-Mar-2017 09:35:09 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139}() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[19-Mar-2017 09:35:09 UTC] PHP   6. FOS\CommentBundle\Controller\ThreadController->postThreadCommentsAction() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[19-Mar-2017 09:35:09 UTC] PHP   7. FOS\CommentBundle\Model\CommentManager->saveComment() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Controller/ThreadController.php:492
+[19-Mar-2017 09:35:09 UTC] PHP   8. FOS\CommentBundle\Entity\CommentManager->doSaveComment() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Model/CommentManager.php:136
+[19-Mar-2017 09:35:09 UTC] PHP   9. Doctrine\ORM\EntityManager->flush() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Entity/CommentManager.php:128
+[19-Mar-2017 09:35:09 UTC] PHP  10. Doctrine\ORM\UnitOfWork->commit() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php:356
+[19-Mar-2017 09:35:09 UTC] PHP  11. Doctrine\ORM\UnitOfWork->executeInserts() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:378
+[19-Mar-2017 09:35:09 UTC] PHP  12. Doctrine\ORM\Event\ListenersInvoker->invoke() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:1035
+[19-Mar-2017 09:35:09 UTC] PHP  13. Symfony\Bridge\Doctrine\ContainerAwareEventManager->dispatchEvent() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/Event/ListenersInvoker.php:117
+[19-Mar-2017 09:35:09 UTC] PHP  14. MM\PlatformBundle\DoctrineListener\CommentCreationListener->postPersist() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Bridge/Doctrine/ContainerAwareEventManager.php:63
+[19-Mar-2017 09:35:09 UTC] PHP  15. MM\PlatformBundle\Email\CommentMailer->sendNewNotification() /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/DoctrineListener/CommentCreationListener.php:29
+[19-Mar-2017 09:37:24 UTC] PHP Fatal error:  Call to a member function getAuthor() on a non-object in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php on line 38
+[19-Mar-2017 09:37:24 UTC] PHP Stack trace:
+[19-Mar-2017 09:37:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/Symfony/web/app_dev.php:0
+[19-Mar-2017 09:37:24 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/Symfony/web/app_dev.php:30
+[19-Mar-2017 09:37:24 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[19-Mar-2017 09:37:24 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:62
+[19-Mar-2017 09:37:24 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139}() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[19-Mar-2017 09:37:24 UTC] PHP   6. FOS\CommentBundle\Controller\ThreadController->postThreadCommentsAction() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[19-Mar-2017 09:37:24 UTC] PHP   7. FOS\CommentBundle\Model\CommentManager->saveComment() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Controller/ThreadController.php:492
+[19-Mar-2017 09:37:24 UTC] PHP   8. FOS\CommentBundle\Entity\CommentManager->doSaveComment() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Model/CommentManager.php:136
+[19-Mar-2017 09:37:24 UTC] PHP   9. Doctrine\ORM\EntityManager->flush() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Entity/CommentManager.php:128
+[19-Mar-2017 09:37:24 UTC] PHP  10. Doctrine\ORM\UnitOfWork->commit() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php:356
+[19-Mar-2017 09:37:24 UTC] PHP  11. Doctrine\ORM\UnitOfWork->executeInserts() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:378
+[19-Mar-2017 09:37:24 UTC] PHP  12. Doctrine\ORM\Event\ListenersInvoker->invoke() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:1035
+[19-Mar-2017 09:37:24 UTC] PHP  13. Symfony\Bridge\Doctrine\ContainerAwareEventManager->dispatchEvent() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/Event/ListenersInvoker.php:117
+[19-Mar-2017 09:37:24 UTC] PHP  14. MM\PlatformBundle\DoctrineListener\CommentCreationListener->postPersist() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Bridge/Doctrine/ContainerAwareEventManager.php:63
+[19-Mar-2017 09:37:24 UTC] PHP  15. MM\PlatformBundle\Email\CommentMailer->sendNewNotification() /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/DoctrineListener/CommentCreationListener.php:29
+[19-Mar-2017 09:38:21 UTC] PHP Fatal error:  Call to a member function getAuthor() on a non-object in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php on line 38
+[19-Mar-2017 09:38:21 UTC] PHP Stack trace:
+[19-Mar-2017 09:38:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/Symfony/web/app_dev.php:0
+[19-Mar-2017 09:38:21 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/Symfony/web/app_dev.php:30
+[19-Mar-2017 09:38:21 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[19-Mar-2017 09:38:21 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:62
+[19-Mar-2017 09:38:21 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139}() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[19-Mar-2017 09:38:21 UTC] PHP   6. FOS\CommentBundle\Controller\ThreadController->postThreadCommentsAction() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[19-Mar-2017 09:38:21 UTC] PHP   7. FOS\CommentBundle\Model\CommentManager->saveComment() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Controller/ThreadController.php:492
+[19-Mar-2017 09:38:21 UTC] PHP   8. FOS\CommentBundle\Entity\CommentManager->doSaveComment() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Model/CommentManager.php:136
+[19-Mar-2017 09:38:21 UTC] PHP   9. Doctrine\ORM\EntityManager->flush() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Entity/CommentManager.php:128
+[19-Mar-2017 09:38:21 UTC] PHP  10. Doctrine\ORM\UnitOfWork->commit() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php:356
+[19-Mar-2017 09:38:21 UTC] PHP  11. Doctrine\ORM\UnitOfWork->executeInserts() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:378
+[19-Mar-2017 09:38:21 UTC] PHP  12. Doctrine\ORM\Event\ListenersInvoker->invoke() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:1035
+[19-Mar-2017 09:38:21 UTC] PHP  13. Symfony\Bridge\Doctrine\ContainerAwareEventManager->dispatchEvent() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/Event/ListenersInvoker.php:117
+[19-Mar-2017 09:38:21 UTC] PHP  14. MM\PlatformBundle\DoctrineListener\CommentCreationListener->postPersist() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Bridge/Doctrine/ContainerAwareEventManager.php:63
+[19-Mar-2017 09:38:21 UTC] PHP  15. MM\PlatformBundle\Email\CommentMailer->sendNewNotification() /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/DoctrineListener/CommentCreationListener.php:29
+[19-Mar-2017 09:40:12 UTC] PHP Fatal error:  Call to a member function getAuthor() on a non-object in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php on line 38
+[19-Mar-2017 09:40:12 UTC] PHP Stack trace:
+[19-Mar-2017 09:40:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/Symfony/web/app_dev.php:0
+[19-Mar-2017 09:40:12 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/Symfony/web/app_dev.php:30
+[19-Mar-2017 09:40:12 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[19-Mar-2017 09:40:12 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:62
+[19-Mar-2017 09:40:12 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139}() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[19-Mar-2017 09:40:12 UTC] PHP   6. FOS\CommentBundle\Controller\ThreadController->postThreadCommentsAction() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[19-Mar-2017 09:40:12 UTC] PHP   7. FOS\CommentBundle\Model\CommentManager->saveComment() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Controller/ThreadController.php:492
+[19-Mar-2017 09:40:12 UTC] PHP   8. FOS\CommentBundle\Entity\CommentManager->doSaveComment() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Model/CommentManager.php:136
+[19-Mar-2017 09:40:12 UTC] PHP   9. Doctrine\ORM\EntityManager->flush() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Entity/CommentManager.php:128
+[19-Mar-2017 09:40:12 UTC] PHP  10. Doctrine\ORM\UnitOfWork->commit() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php:356
+[19-Mar-2017 09:40:12 UTC] PHP  11. Doctrine\ORM\UnitOfWork->executeInserts() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:378
+[19-Mar-2017 09:40:12 UTC] PHP  12. Doctrine\ORM\Event\ListenersInvoker->invoke() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:1035
+[19-Mar-2017 09:40:12 UTC] PHP  13. Symfony\Bridge\Doctrine\ContainerAwareEventManager->dispatchEvent() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/Event/ListenersInvoker.php:117
+[19-Mar-2017 09:40:12 UTC] PHP  14. MM\PlatformBundle\DoctrineListener\CommentCreationListener->postPersist() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Bridge/Doctrine/ContainerAwareEventManager.php:63
+[19-Mar-2017 09:40:12 UTC] PHP  15. MM\PlatformBundle\Email\CommentMailer->sendNewNotification() /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/DoctrineListener/CommentCreationListener.php:29
+[19-Mar-2017 09:41:23 UTC] PHP Fatal error:  Call to a member function getAuthor() on a non-object in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php on line 38
+[19-Mar-2017 09:41:23 UTC] PHP Stack trace:
+[19-Mar-2017 09:41:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/Symfony/web/app_dev.php:0
+[19-Mar-2017 09:41:23 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/Symfony/web/app_dev.php:30
+[19-Mar-2017 09:41:23 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[19-Mar-2017 09:41:23 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:62
+[19-Mar-2017 09:41:23 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139}() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[19-Mar-2017 09:41:23 UTC] PHP   6. FOS\CommentBundle\Controller\ThreadController->postThreadCommentsAction() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[19-Mar-2017 09:41:23 UTC] PHP   7. FOS\CommentBundle\Model\CommentManager->saveComment() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Controller/ThreadController.php:492
+[19-Mar-2017 09:41:23 UTC] PHP   8. FOS\CommentBundle\Entity\CommentManager->doSaveComment() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Model/CommentManager.php:136
+[19-Mar-2017 09:41:23 UTC] PHP   9. Doctrine\ORM\EntityManager->flush() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Entity/CommentManager.php:128
+[19-Mar-2017 09:41:23 UTC] PHP  10. Doctrine\ORM\UnitOfWork->commit() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php:356
+[19-Mar-2017 09:41:23 UTC] PHP  11. Doctrine\ORM\UnitOfWork->executeInserts() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:378
+[19-Mar-2017 09:41:23 UTC] PHP  12. Doctrine\ORM\Event\ListenersInvoker->invoke() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:1035
+[19-Mar-2017 09:41:23 UTC] PHP  13. Symfony\Bridge\Doctrine\ContainerAwareEventManager->dispatchEvent() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/Event/ListenersInvoker.php:117
+[19-Mar-2017 09:41:23 UTC] PHP  14. MM\PlatformBundle\DoctrineListener\CommentCreationListener->postPersist() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Bridge/Doctrine/ContainerAwareEventManager.php:63
+[19-Mar-2017 09:41:23 UTC] PHP  15. MM\PlatformBundle\Email\CommentMailer->sendNewNotification() /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/DoctrineListener/CommentCreationListener.php:29
+[19-Mar-2017 09:46:04 UTC] PHP Fatal error:  Call to undefined method FOS\UserBundle\Doctrine\UserManager::findByName() in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php on line 33
+[19-Mar-2017 09:46:04 UTC] PHP Stack trace:
+[19-Mar-2017 09:46:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/Symfony/web/app_dev.php:0
+[19-Mar-2017 09:46:04 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/Symfony/web/app_dev.php:30
+[19-Mar-2017 09:46:04 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[19-Mar-2017 09:46:04 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:62
+[19-Mar-2017 09:46:04 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139}() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[19-Mar-2017 09:46:04 UTC] PHP   6. FOS\CommentBundle\Controller\ThreadController->postThreadCommentsAction() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[19-Mar-2017 09:46:04 UTC] PHP   7. FOS\CommentBundle\Model\CommentManager->saveComment() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Controller/ThreadController.php:492
+[19-Mar-2017 09:46:04 UTC] PHP   8. FOS\CommentBundle\Entity\CommentManager->doSaveComment() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Model/CommentManager.php:136
+[19-Mar-2017 09:46:04 UTC] PHP   9. Doctrine\ORM\EntityManager->flush() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Entity/CommentManager.php:128
+[19-Mar-2017 09:46:04 UTC] PHP  10. Doctrine\ORM\UnitOfWork->commit() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php:356
+[19-Mar-2017 09:46:04 UTC] PHP  11. Doctrine\ORM\UnitOfWork->executeInserts() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:378
+[19-Mar-2017 09:46:04 UTC] PHP  12. Doctrine\ORM\Event\ListenersInvoker->invoke() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:1035
+[19-Mar-2017 09:46:04 UTC] PHP  13. Symfony\Bridge\Doctrine\ContainerAwareEventManager->dispatchEvent() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/Event/ListenersInvoker.php:117
+[19-Mar-2017 09:46:04 UTC] PHP  14. MM\PlatformBundle\DoctrineListener\CommentCreationListener->postPersist() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Bridge/Doctrine/ContainerAwareEventManager.php:63
+[19-Mar-2017 09:46:04 UTC] PHP  15. MM\PlatformBundle\Email\CommentMailer->sendNewNotification() /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/DoctrineListener/CommentCreationListener.php:29
+[19-Mar-2017 09:49:21 UTC] PHP Fatal error:  Call to undefined method FOS\UserBundle\Doctrine\UserManager::findByUsername() in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php on line 33
+[19-Mar-2017 09:49:21 UTC] PHP Stack trace:
+[19-Mar-2017 09:49:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/Symfony/web/app_dev.php:0
+[19-Mar-2017 09:49:21 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/Symfony/web/app_dev.php:30
+[19-Mar-2017 09:49:21 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[19-Mar-2017 09:49:21 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:62
+[19-Mar-2017 09:49:21 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139}() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[19-Mar-2017 09:49:21 UTC] PHP   6. FOS\CommentBundle\Controller\ThreadController->postThreadCommentsAction() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[19-Mar-2017 09:49:21 UTC] PHP   7. FOS\CommentBundle\Model\CommentManager->saveComment() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Controller/ThreadController.php:492
+[19-Mar-2017 09:49:21 UTC] PHP   8. FOS\CommentBundle\Entity\CommentManager->doSaveComment() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Model/CommentManager.php:136
+[19-Mar-2017 09:49:21 UTC] PHP   9. Doctrine\ORM\EntityManager->flush() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Entity/CommentManager.php:128
+[19-Mar-2017 09:49:21 UTC] PHP  10. Doctrine\ORM\UnitOfWork->commit() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php:356
+[19-Mar-2017 09:49:21 UTC] PHP  11. Doctrine\ORM\UnitOfWork->executeInserts() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:378
+[19-Mar-2017 09:49:21 UTC] PHP  12. Doctrine\ORM\Event\ListenersInvoker->invoke() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:1035
+[19-Mar-2017 09:49:21 UTC] PHP  13. Symfony\Bridge\Doctrine\ContainerAwareEventManager->dispatchEvent() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/Event/ListenersInvoker.php:117
+[19-Mar-2017 09:49:21 UTC] PHP  14. MM\PlatformBundle\DoctrineListener\CommentCreationListener->postPersist() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Bridge/Doctrine/ContainerAwareEventManager.php:63
+[19-Mar-2017 09:49:21 UTC] PHP  15. MM\PlatformBundle\Email\CommentMailer->sendNewNotification() /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/DoctrineListener/CommentCreationListener.php:29
+[31-Mar-2017 16:55:03 UTC] PHP Parse error:  syntax error, unexpected '*' in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php on line 43
+[31-Mar-2017 16:55:03 UTC] PHP Stack trace:
+[31-Mar-2017 16:55:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/Symfony/web/app_dev.php:0
+[31-Mar-2017 16:55:03 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/Symfony/web/app_dev.php:30
+[31-Mar-2017 16:55:03 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[31-Mar-2017 16:55:03 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:62
+[31-Mar-2017 16:55:03 UTC] PHP   5. Symfony\Component\EventDispatcher\Debug\TraceableEventDispatcher->dispatch() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:120
+[31-Mar-2017 16:55:03 UTC] PHP   6. Symfony\Component\EventDispatcher\EventDispatcher->dispatch() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/EventDispatcher/Debug/TraceableEventDispatcher.php:132
+[31-Mar-2017 16:55:03 UTC] PHP   7. Symfony\Component\EventDispatcher\EventDispatcher->doDispatch() /home/ubuntu/workspace/Symfony/var/cache/dev/classes.php:1672
+[31-Mar-2017 16:55:03 UTC] PHP   8. call_user_func:{/home/ubuntu/workspace/Symfony/var/cache/dev/classes.php:1754}() /home/ubuntu/workspace/Symfony/var/cache/dev/classes.php:1754
+[31-Mar-2017 16:55:03 UTC] PHP   9. Symfony\Component\EventDispatcher\Debug\WrappedListener->__invoke() /home/ubuntu/workspace/Symfony/var/cache/dev/classes.php:1754
+[31-Mar-2017 16:55:03 UTC] PHP  10. call_user_func:{/home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/EventDispatcher/Debug/WrappedListener.php:61}() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/EventDispatcher/Debug/WrappedListener.php:61
+[31-Mar-2017 16:55:03 UTC] PHP  11. Symfony\Component\HttpKernel\EventListener\RouterListener->onKernelRequest() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/EventDispatcher/Debug/WrappedListener.php:61
+[31-Mar-2017 16:55:03 UTC] PHP  12. Symfony\Component\Routing\Router->matchRequest() /home/ubuntu/workspace/Symfony/var/cache/dev/classes.php:1954
+[31-Mar-2017 16:55:03 UTC] PHP  13. Symfony\Component\Routing\Router->getMatcher() /home/ubuntu/workspace/Symfony/var/cache/dev/classes.php:1222
+[31-Mar-2017 16:55:03 UTC] PHP  14. Symfony\Component\Config\ResourceCheckerConfigCacheFactory->cache() /home/ubuntu/workspace/Symfony/var/cache/dev/classes.php:1254
+[31-Mar-2017 16:55:03 UTC] PHP  15. call_user_func:{/home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/Config/ResourceCheckerConfigCacheFactory.php:46}() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/Config/ResourceCheckerConfigCacheFactory.php:46
+[31-Mar-2017 16:55:03 UTC] PHP  16. Symfony\Component\Routing\Router->Symfony\Component\Routing\{closure}() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/Config/ResourceCheckerConfigCacheFactory.php:46
+[31-Mar-2017 16:55:03 UTC] PHP  17. Symfony\Component\Routing\Router->getMatcherDumperInstance() /home/ubuntu/workspace/Symfony/var/cache/dev/classes.php:1244
+[31-Mar-2017 16:55:03 UTC] PHP  18. Symfony\Bundle\FrameworkBundle\Routing\Router->getRouteCollection() /home/ubuntu/workspace/Symfony/var/cache/dev/classes.php:1292
+[31-Mar-2017 16:55:03 UTC] PHP  19. Symfony\Component\DependencyInjection\Container->get() /home/ubuntu/workspace/Symfony/var/cache/dev/classes.php:1511
+[31-Mar-2017 16:55:03 UTC] PHP  20. appDevDebugProjectContainer->getRouting_LoaderService() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Container.php:273
+[31-Mar-2017 16:55:03 UTC] PHP  21. Symfony\Component\DependencyInjection\Container->get() /home/ubuntu/workspace/Symfony/var/cache/dev/appDevDebugProjectContainer.php:3265
+[31-Mar-2017 16:55:03 UTC] PHP  22. appDevDebugProjectContainer->getAssetic_AssetManagerService() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Container.php:273
+[31-Mar-2017 16:55:03 UTC] PHP  23. Symfony\Component\DependencyInjection\Container->get() /home/ubuntu/workspace/Symfony/var/cache/dev/appDevDebugProjectContainer.php:404
+[31-Mar-2017 16:55:03 UTC] PHP  24. appDevDebugProjectContainer->getTwigService() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Container.php:273
+[31-Mar-2017 16:55:03 UTC] PHP  25. Symfony\Component\DependencyInjection\Container->get() /home/ubuntu/workspace/Symfony/var/cache/dev/appDevDebugProjectContainer.php:4333
+[31-Mar-2017 16:55:03 UTC] PHP  26. appDevDebugProjectContainer->getSecurity_AuthorizationCheckerService() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Container.php:273
+[31-Mar-2017 16:55:03 UTC] PHP  27. Symfony\Component\DependencyInjection\Container->get() /home/ubuntu/workspace/Symfony/var/cache/dev/appDevDebugProjectContainer.php:3311
+[31-Mar-2017 16:55:03 UTC] PHP  28. appDevDebugProjectContainer->getSecurity_Authentication_ManagerService() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Container.php:273
+[31-Mar-2017 16:55:03 UTC] PHP  29. Symfony\Component\DependencyInjection\Container->get() /home/ubuntu/workspace/Symfony/var/cache/dev/appDevDebugProjectContainer.php:4896
+[31-Mar-2017 16:55:03 UTC] PHP  30. appDevDebugProjectContainer->getFosUser_UserProvider_UsernameService() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Container.php:273
+[31-Mar-2017 16:55:03 UTC] PHP  31. Symfony\Component\DependencyInjection\Container->get() /home/ubuntu/workspace/Symfony/var/cache/dev/appDevDebugProjectContainer.php:4749
+[31-Mar-2017 16:55:03 UTC] PHP  32. appDevDebugProjectContainer->getFosUser_UserManagerService() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Container.php:273
+[31-Mar-2017 16:55:03 UTC] PHP  33. Doctrine\Common\Persistence\AbstractManagerRegistry->getManager() /home/ubuntu/workspace/Symfony/var/cache/dev/appDevDebugProjectContainer.php:2205
+[31-Mar-2017 16:55:03 UTC] PHP  34. Symfony\Bridge\Doctrine\ManagerRegistry->getService() /home/ubuntu/workspace/Symfony/var/cache/dev/classes.php:6773
+[31-Mar-2017 16:55:03 UTC] PHP  35. Symfony\Component\DependencyInjection\Container->get() /home/ubuntu/workspace/Symfony/var/cache/dev/classes.php:6834
+[31-Mar-2017 16:55:03 UTC] PHP  36. appDevDebugProjectContainer->getDoctrine_Orm_DefaultEntityManagerService() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Container.php:273
+[31-Mar-2017 16:55:03 UTC] PHP  37. Symfony\Component\DependencyInjection\Container->get() /home/ubuntu/workspace/Symfony/var/cache/dev/appDevDebugProjectContainer.php:890
+[31-Mar-2017 16:55:03 UTC] PHP  38. appDevDebugProjectContainer->getDoctrine_Dbal_DefaultConnectionService() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Container.php:273
+[31-Mar-2017 16:55:03 UTC] PHP  39. Symfony\Component\DependencyInjection\Container->get() /home/ubuntu/workspace/Symfony/var/cache/dev/appDevDebugProjectContainer.php:831
+[31-Mar-2017 16:55:03 UTC] PHP  40. appDevDebugProjectContainer->getMmPlatform_DoctrineListener_CommentCreationService() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Container.php:273
+[31-Mar-2017 16:55:03 UTC] PHP  41. Symfony\Component\DependencyInjection\Container->get() /home/ubuntu/workspace/Symfony/var/cache/dev/appDevDebugProjectContainer.php:2824
+[31-Mar-2017 16:55:03 UTC] PHP  42. appDevDebugProjectContainer->getMmPlatform_Email_CommentMailerService() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Container.php:273
+[31-Mar-2017 16:55:03 UTC] PHP  43. spl_autoload_call() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Container.php:2850
+[31-Mar-2017 16:55:03 UTC] PHP  44. Symfony\Component\Debug\DebugClassLoader->loadClass() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Container.php:2850
+[31-Mar-2017 16:55:26 UTC] PHP Fatal error:  Call to undefined method MM\PlatformBundle\Entity\Comment::getContent() in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php on line 43
+[31-Mar-2017 16:55:26 UTC] PHP Stack trace:
+[31-Mar-2017 16:55:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/Symfony/web/app_dev.php:0
+[31-Mar-2017 16:55:26 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/Symfony/web/app_dev.php:30
+[31-Mar-2017 16:55:26 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[31-Mar-2017 16:55:26 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:62
+[31-Mar-2017 16:55:26 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139}() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[31-Mar-2017 16:55:26 UTC] PHP   6. FOS\CommentBundle\Controller\ThreadController->postThreadCommentsAction() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[31-Mar-2017 16:55:26 UTC] PHP   7. FOS\CommentBundle\Model\CommentManager->saveComment() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Controller/ThreadController.php:492
+[31-Mar-2017 16:55:26 UTC] PHP   8. FOS\CommentBundle\Entity\CommentManager->doSaveComment() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Model/CommentManager.php:136
+[31-Mar-2017 16:55:26 UTC] PHP   9. Doctrine\ORM\EntityManager->flush() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Entity/CommentManager.php:128
+[31-Mar-2017 16:55:26 UTC] PHP  10. Doctrine\ORM\UnitOfWork->commit() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php:356
+[31-Mar-2017 16:55:26 UTC] PHP  11. Doctrine\ORM\UnitOfWork->executeInserts() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:378
+[31-Mar-2017 16:55:26 UTC] PHP  12. Doctrine\ORM\Event\ListenersInvoker->invoke() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:1035
+[31-Mar-2017 16:55:26 UTC] PHP  13. Symfony\Bridge\Doctrine\ContainerAwareEventManager->dispatchEvent() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/Event/ListenersInvoker.php:117
+[31-Mar-2017 16:55:26 UTC] PHP  14. MM\PlatformBundle\DoctrineListener\CommentCreationListener->postPersist() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Bridge/Doctrine/ContainerAwareEventManager.php:63
+[31-Mar-2017 16:55:26 UTC] PHP  15. MM\PlatformBundle\Email\CommentMailer->sendNewNotification() /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/DoctrineListener/CommentCreationListener.php:29
+[01-Apr-2017 08:41:30 UTC] PHP Fatal error:  Call to a member function getTitle() on a non-object in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Email/CommentMailer.php on line 44
+[01-Apr-2017 08:41:30 UTC] PHP Stack trace:
+[01-Apr-2017 08:41:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/Symfony/web/app_dev.php:0
+[01-Apr-2017 08:41:30 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/Symfony/web/app_dev.php:30
+[01-Apr-2017 08:41:30 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[01-Apr-2017 08:41:30 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:62
+[01-Apr-2017 08:41:30 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139}() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[01-Apr-2017 08:41:30 UTC] PHP   6. FOS\CommentBundle\Controller\ThreadController->postThreadCommentsAction() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[01-Apr-2017 08:41:30 UTC] PHP   7. FOS\CommentBundle\Model\CommentManager->saveComment() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Controller/ThreadController.php:492
+[01-Apr-2017 08:41:30 UTC] PHP   8. FOS\CommentBundle\Entity\CommentManager->doSaveComment() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Model/CommentManager.php:136
+[01-Apr-2017 08:41:30 UTC] PHP   9. Doctrine\ORM\EntityManager->flush() /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/comment-bundle/FOS/CommentBundle/Entity/CommentManager.php:128
+[01-Apr-2017 08:41:30 UTC] PHP  10. Doctrine\ORM\UnitOfWork->commit() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php:356
+[01-Apr-2017 08:41:30 UTC] PHP  11. Doctrine\ORM\UnitOfWork->executeInserts() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:378
+[01-Apr-2017 08:41:30 UTC] PHP  12. Doctrine\ORM\Event\ListenersInvoker->invoke() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:1035
+[01-Apr-2017 08:41:30 UTC] PHP  13. Symfony\Bridge\Doctrine\ContainerAwareEventManager->dispatchEvent() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/Event/ListenersInvoker.php:117
+[01-Apr-2017 08:41:30 UTC] PHP  14. MM\PlatformBundle\DoctrineListener\CommentCreationListener->postPersist() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Bridge/Doctrine/ContainerAwareEventManager.php:63
+[01-Apr-2017 08:41:30 UTC] PHP  15. MM\PlatformBundle\Email\CommentMailer->sendNewNotification() /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/DoctrineListener/CommentCreationListener.php:29
+[13-May-2017 16:23:51 UTC] PHP Fatal error:  Class 'Twig_Extension' not found in /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Bridge/Twig/Extension/FormExtension.php on line 24
+[13-May-2017 16:23:51 UTC] PHP Stack trace:
+[13-May-2017 16:23:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/Symfony/web/app.php:0
+[13-May-2017 16:23:51 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/Symfony/web/app.php:18
+[13-May-2017 16:23:51 UTC] PHP   3. Symfony\Component\HttpKernel\Kernel->boot() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:166
+[13-May-2017 16:23:51 UTC] PHP   4. Symfony\Component\HttpKernel\Kernel->initializeContainer() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:117
+[13-May-2017 16:23:51 UTC] PHP   5. Symfony\Component\DependencyInjection\ContainerBuilder->compile() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:477
+[13-May-2017 16:23:51 UTC] PHP   6. Symfony\Component\DependencyInjection\Compiler\Compiler->compile() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/ContainerBuilder.php:540
+[13-May-2017 16:23:51 UTC] PHP   7. Symfony\Bundle\TwigBundle\DependencyInjection\Compiler\ExtensionPass->process() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Compiler/Compiler.php:107
+[13-May-2017 16:23:51 UTC] PHP   8. ReflectionClass->__construct() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/DependencyInjection/Compiler/ExtensionPass.php:27
+[13-May-2017 16:23:51 UTC] PHP   9. spl_autoload_call() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/DependencyInjection/Compiler/ExtensionPass.php:27
+[13-May-2017 16:23:51 UTC] PHP  10. Composer\Autoload\ClassLoader->loadClass() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/DependencyInjection/Compiler/ExtensionPass.php:27
+[13-May-2017 16:23:51 UTC] PHP  11. Composer\Autoload\includeFile() /home/ubuntu/workspace/Symfony/vendor/composer/ClassLoader.php:322
+[13-May-2017 16:23:51 UTC] PHP  12. include() /home/ubuntu/workspace/Symfony/vendor/composer/ClassLoader.php:444
+[13-May-2017 16:31:43 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/ubuntu/workspace/Symfony/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1595
+[13-May-2017 16:31:43 UTC] PHP Stack trace:
+[13-May-2017 16:31:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/Symfony/web/app_dev.php:0
+[13-May-2017 16:31:43 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/Symfony/web/app_dev.php:30
+[13-May-2017 16:31:43 UTC] PHP   3. Symfony\Component\HttpKernel\Kernel->boot() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:166
+[13-May-2017 16:31:43 UTC] PHP   4. Symfony\Component\HttpKernel\Kernel->initializeContainer() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:117
+[13-May-2017 16:31:43 UTC] PHP   5. Symfony\Component\DependencyInjection\Container->get() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:489
+[13-May-2017 16:31:43 UTC] PHP   6. appDevDebugProjectContainer->getCacheWarmerService() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Container.php:273
+[13-May-2017 16:31:43 UTC] PHP   7. Symfony\Component\DependencyInjection\Container->get() /home/ubuntu/workspace/Symfony/var/cache/dev/appDevDebugProjectContainer.php:511
+[13-May-2017 16:31:43 UTC] PHP   8. appDevDebugProjectContainer->getTwigService() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Container.php:273
+[13-May-2017 16:31:43 UTC] PHP   9. Twig_Environment->__construct() /home/ubuntu/workspace/Symfony/var/cache/dev/appDevDebugProjectContainer.php:4396
+[13-May-2017 16:31:43 UTC] PHP  10. spl_autoload_call() /home/ubuntu/workspace/Symfony/var/cache/dev/appDevDebugProjectContainer.php:106
+[13-May-2017 16:31:43 UTC] PHP  11. Symfony\Component\Debug\DebugClassLoader->loadClass() /home/ubuntu/workspace/Symfony/var/cache/dev/appDevDebugProjectContainer.php:106
+[13-May-2017 16:36:01 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/ubuntu/workspace/Symfony/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1595
+[13-May-2017 16:36:01 UTC] PHP Stack trace:
+[13-May-2017 16:36:01 UTC] PHP   1. {main}() /home/ubuntu/workspace/Symfony/web/app_dev.php:0
+[13-May-2017 16:36:01 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/Symfony/web/app_dev.php:30
+[13-May-2017 16:36:01 UTC] PHP   3. Symfony\Component\HttpKernel\Kernel->boot() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:166
+[13-May-2017 16:36:01 UTC] PHP   4. Symfony\Component\HttpKernel\Kernel->doLoadClassCache() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:110
+[13-May-2017 16:36:01 UTC] PHP   5. Symfony\Component\ClassLoader\ClassCollectionLoader::load() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:374
+[13-May-2017 16:36:01 UTC] PHP   6. Symfony\Component\ClassLoader\ClassCollectionLoader::getOrderedClasses() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/ClassLoader/ClassCollectionLoader.php:95
+[13-May-2017 16:36:01 UTC] PHP   7. ReflectionClass->__construct() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/ClassLoader/ClassCollectionLoader.php:254
+[13-May-2017 16:36:01 UTC] PHP   8. spl_autoload_call() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/ClassLoader/ClassCollectionLoader.php:254
+[13-May-2017 16:36:01 UTC] PHP   9. Symfony\Component\Debug\DebugClassLoader->loadClass() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/ClassLoader/ClassCollectionLoader.php:254
+[13-May-2017 16:37:52 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/ubuntu/workspace/Symfony/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1595
+[13-May-2017 16:37:52 UTC] PHP Stack trace:
+[13-May-2017 16:37:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/Symfony/web/app_dev.php:0
+[13-May-2017 16:37:52 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/Symfony/web/app_dev.php:30
+[13-May-2017 16:37:52 UTC] PHP   3. Symfony\Component\HttpKernel\Kernel->boot() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:166
+[13-May-2017 16:37:52 UTC] PHP   4. Symfony\Component\HttpKernel\Kernel->doLoadClassCache() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:110
+[13-May-2017 16:37:52 UTC] PHP   5. Symfony\Component\ClassLoader\ClassCollectionLoader::load() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:374
+[13-May-2017 16:37:52 UTC] PHP   6. Symfony\Component\ClassLoader\ClassCollectionLoader::getOrderedClasses() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/ClassLoader/ClassCollectionLoader.php:95
+[13-May-2017 16:37:52 UTC] PHP   7. ReflectionClass->__construct() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/ClassLoader/ClassCollectionLoader.php:254
+[13-May-2017 16:37:52 UTC] PHP   8. spl_autoload_call() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/ClassLoader/ClassCollectionLoader.php:254
+[13-May-2017 16:37:52 UTC] PHP   9. Symfony\Component\Debug\DebugClassLoader->loadClass() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/ClassLoader/ClassCollectionLoader.php:254
+[14-May-2017 11:25:48 UTC] PHP Fatal error:  Uncaught exception 'Symfony\Component\Config\Definition\Exception\InvalidConfigurationException' with message 'The child node "from_email" at path "fos_user" must be configured.' in /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/ArrayNode.php:237
+Stack trace:
+#0 /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/BaseNode.php(303): Symfony\Component\Config\Definition\ArrayNode->finalizeValue(Array)
+#1 /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Processor.php(37): Symfony\Component\Config\Definition\BaseNode->finalize(Array)
+#2 /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Processor.php(50): Symfony\Component\Config\Definition\Processor->process(Object(Symfony\Component\Config\Definition\ArrayNode), Array)
+#3 /home/ubuntu/workspace/Symfony/vendor/friendsofsymfony/user-bundle/DependencyInjection/FOSUserExtension.php(51): Symfon in /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/Config/Definition/ArrayNode.php on line 237
+[14-May-2017 11:29:43 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/ubuntu/workspace/Symfony/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1595
+[14-May-2017 11:29:43 UTC] PHP Stack trace:
+[14-May-2017 11:29:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/Symfony/web/app.php:0
+[14-May-2017 11:29:43 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/Symfony/web/app.php:18
+[14-May-2017 11:29:43 UTC] PHP   3. Symfony\Component\HttpKernel\Kernel->boot() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:166
+[14-May-2017 11:29:43 UTC] PHP   4. Symfony\Component\HttpKernel\Kernel->initializeContainer() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:117
+[14-May-2017 11:29:43 UTC] PHP   5. Symfony\Component\DependencyInjection\Container->get() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:489
+[14-May-2017 11:29:43 UTC] PHP   6. appProdProjectContainer->getCacheWarmerService() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Container.php:273
+[14-May-2017 11:29:43 UTC] PHP   7. Symfony\Component\DependencyInjection\Container->get() /home/ubuntu/workspace/Symfony/var/cache/prod/appProdProjectContainer.php:363
+[14-May-2017 11:29:43 UTC] PHP   8. appProdProjectContainer->getTwigService() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Container.php:273
+[14-May-2017 11:29:43 UTC] PHP   9. Twig_Environment->__construct() /home/ubuntu/workspace/Symfony/var/cache/prod/appProdProjectContainer.php:1573
+[14-May-2017 11:29:43 UTC] PHP  10. spl_autoload_call() /home/ubuntu/workspace/Symfony/var/cache/prod/appProdProjectContainer.php:106
+[14-May-2017 11:29:43 UTC] PHP  11. Composer\Autoload\ClassLoader->loadClass() /home/ubuntu/workspace/Symfony/var/cache/prod/appProdProjectContainer.php:106
+[14-May-2017 11:29:43 UTC] PHP  12. Composer\Autoload\includeFile() /home/ubuntu/workspace/Symfony/vendor/composer/ClassLoader.php:322
+[14-May-2017 11:31:33 UTC] PHP Warning:  require(/home/ubuntu/workspace/Symfony/var/cache/prod/doctrine/orm/Proxies/__CG__MMPlatformBundleEntityImage.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/Symfony/vendor/doctrine/common/lib/Doctrine/Common/Proxy/AbstractProxyFactory.php on line 209
+[14-May-2017 11:31:33 UTC] PHP Stack trace:
+[14-May-2017 11:31:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/Symfony/web/app.php:0
+[14-May-2017 11:31:33 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/Symfony/web/app.php:18
+[14-May-2017 11:31:33 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[14-May-2017 11:31:33 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:62
+[14-May-2017 11:31:33 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139}() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[14-May-2017 11:31:33 UTC] PHP   6. MM\CoreBundle\Controller\CoreController->indexAction() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[14-May-2017 11:31:33 UTC] PHP   7. Doctrine\ORM\EntityRepository->findBy() /home/ubuntu/workspace/Symfony/src/MM/CoreBundle/Controller/CoreController.php:22
+[14-May-2017 11:31:33 UTC] PHP   8. Doctrine\ORM\Persisters\Entity\BasicEntityPersister->loadAll() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/EntityRepository.php:181
+[14-May-2017 11:31:33 UTC] PHP   9. Doctrine\ORM\Internal\Hydration\AbstractHydrator->hydrateAll() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/Persisters/Entity/BasicEntityPersister.php:888
+[14-May-2017 11:31:33 UTC] PHP  10. Doctrine\ORM\Internal\Hydration\SimpleObjectHydrator->hydrateAllData() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/Internal/Hydration/AbstractHydrator.php:147
+[14-May-2017 11:31:33 UTC] PHP  11. Doctrine\ORM\Internal\Hydration\SimpleObjectHydrator->hydrateRowData() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/Internal/Hydration/SimpleObjectHydrator.php:69
+[14-May-2017 11:31:33 UTC] PHP  12. Doctrine\ORM\UnitOfWork->createEntity() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/Internal/Hydration/SimpleObjectHydrator.php:147
+[14-May-2017 11:31:33 UTC] PHP  13. Doctrine\Common\Proxy\AbstractProxyFactory->getProxy() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:2707
+[14-May-2017 11:31:33 UTC] PHP  14. Doctrine\Common\Proxy\AbstractProxyFactory->getProxyDefinition() /home/ubuntu/workspace/Symfony/vendor/doctrine/common/lib/Doctrine/Common/Proxy/AbstractProxyFactory.php:119
+[14-May-2017 11:31:33 UTC] PHP Fatal error:  require(): Failed opening required '/home/ubuntu/workspace/Symfony/var/cache/prod/doctrine/orm/Proxies/__CG__MMPlatformBundleEntityImage.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/Symfony/vendor/doctrine/common/lib/Doctrine/Common/Proxy/AbstractProxyFactory.php on line 209
+[14-May-2017 11:31:33 UTC] PHP Stack trace:
+[14-May-2017 11:31:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/Symfony/web/app.php:0
+[14-May-2017 11:31:33 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/Symfony/web/app.php:18
+[14-May-2017 11:31:33 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[14-May-2017 11:31:33 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:62
+[14-May-2017 11:31:33 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139}() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[14-May-2017 11:31:33 UTC] PHP   6. MM\CoreBundle\Controller\CoreController->indexAction() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[14-May-2017 11:31:33 UTC] PHP   7. Doctrine\ORM\EntityRepository->findBy() /home/ubuntu/workspace/Symfony/src/MM/CoreBundle/Controller/CoreController.php:22
+[14-May-2017 11:31:33 UTC] PHP   8. Doctrine\ORM\Persisters\Entity\BasicEntityPersister->loadAll() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/EntityRepository.php:181
+[14-May-2017 11:31:33 UTC] PHP   9. Doctrine\ORM\Internal\Hydration\AbstractHydrator->hydrateAll() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/Persisters/Entity/BasicEntityPersister.php:888
+[14-May-2017 11:31:33 UTC] PHP  10. Doctrine\ORM\Internal\Hydration\SimpleObjectHydrator->hydrateAllData() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/Internal/Hydration/AbstractHydrator.php:147
+[14-May-2017 11:31:33 UTC] PHP  11. Doctrine\ORM\Internal\Hydration\SimpleObjectHydrator->hydrateRowData() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/Internal/Hydration/SimpleObjectHydrator.php:69
+[14-May-2017 11:31:33 UTC] PHP  12. Doctrine\ORM\UnitOfWork->createEntity() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/Internal/Hydration/SimpleObjectHydrator.php:147
+[14-May-2017 11:31:33 UTC] PHP  13. Doctrine\Common\Proxy\AbstractProxyFactory->getProxy() /home/ubuntu/workspace/Symfony/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:2707
+[14-May-2017 11:31:33 UTC] PHP  14. Doctrine\Common\Proxy\AbstractProxyFactory->getProxyDefinition() /home/ubuntu/workspace/Symfony/vendor/doctrine/common/lib/Doctrine/Common/Proxy/AbstractProxyFactory.php:119
+[20-May-2017 15:08:22 UTC] PHP Fatal error:  Call to a member function getLikes() on a non-object in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Controller/ArticleController.php on line 116
+[20-May-2017 15:08:22 UTC] PHP Stack trace:
+[20-May-2017 15:08:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/Symfony/web/app_dev.php:0
+[20-May-2017 15:08:22 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/Symfony/web/app_dev.php:30
+[20-May-2017 15:08:22 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[20-May-2017 15:08:22 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:62
+[20-May-2017 15:08:22 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139}() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[20-May-2017 15:08:22 UTC] PHP   6. MM\PlatformBundle\Controller\ArticleController->viewAction() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[20-May-2017 15:09:13 UTC] PHP Fatal error:  Call to a member function getLikes() on a non-object in /home/ubuntu/workspace/Symfony/src/MM/PlatformBundle/Controller/ArticleController.php on line 118
+[20-May-2017 15:09:13 UTC] PHP Stack trace:
+[20-May-2017 15:09:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/Symfony/web/app_dev.php:0
+[20-May-2017 15:09:13 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/Symfony/web/app_dev.php:30
+[20-May-2017 15:09:13 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[20-May-2017 15:09:13 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:62
+[20-May-2017 15:09:13 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139}() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139
+[20-May-2017 15:09:13 UTC] PHP   6. MM\PlatformBundle\Controller\ArticleController->viewAction() /home/ubuntu/workspace/Symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:139

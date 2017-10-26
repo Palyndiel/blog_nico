@@ -1,0 +1,149 @@
+imports:
+    - { resource: parameters.yml }
+    - { resource: security.yml }
+    - { resource: services.yml }
+
+# Put parameters here that don't need to change on each machine where the app is deployed
+# http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
+parameters:
+    locale: fr
+
+framework:
+    #esi:             ~
+    translator:      { fallbacks: ["%locale%"] }
+    secret:          "%secret%"
+    router:
+        resource: "%kernel.root_dir%/config/routing.yml"
+        strict_requirements: ~
+    form:            ~
+    csrf_protection: ~
+    validation:      { enable_annotations: true }
+    #serializer:      { enable_annotations: true }
+    templating:
+        engines: ['twig']
+    default_locale:  "%locale%"
+    trusted_hosts:   ~
+    trusted_proxies: ~
+    session:
+        # http://symfony.com/doc/current/reference/configuration/framework.html#handler-id
+        handler_id:  session.handler.native_file
+        save_path:   "%kernel.root_dir%/../var/sessions/%kernel.environment%"
+    fragments:       ~
+    http_method_override: true
+    assets: ~
+
+# Twig Configuration
+twig:
+    debug:            "%kernel.debug%"
+    strict_variables: "%kernel.debug%"
+    form_themes:
+        - 'bootstrap_3_layout.html.twig'
+
+# Doctrine Configuration
+doctrine:
+    dbal:
+        driver:   pdo_mysql
+        host:     "%database_host%"
+        port:     "%database_port%"
+        dbname:   "%database_name%"
+        user:     "%database_user%"
+        password: "%database_password%"
+        charset:  UTF8
+        # if using pdo_sqlite as your database driver:
+        #   1. add the path in parameters.yml
+        #     e.g. database_path: "%kernel.root_dir%/data/data.db3"
+        #   2. Uncomment database_path in parameters.yml.dist
+        #   3. Uncomment next line:
+        #     path:     "%database_path%"
+
+    orm:
+        auto_generate_proxy_classes: "%kernel.debug%"
+        naming_strategy: doctrine.orm.naming_strategy.underscore
+        auto_mapping: true
+
+# Swiftmailer Configuration
+swiftmailer:
+    transport: gmail
+#    host:      "%mailer_host%"
+#    port:      "%mailer_port%"
+    username:  "%mailer_user%"
+    password:  "%mailer_password%"
+#    spool:     { type: memory }
+
+# Stof\DoctrineExtensionsBundle configuration
+stof_doctrine_extensions:
+    orm:
+        default:
+            sluggable: true
+
+fos_user:
+    db_driver: orm
+    firewall_name: main
+    user_class: MM\UserBundle\Entity\User
+    resetting:
+        token_ttl: 86400
+        email:
+            template:   FOSUserBundle:Resetting:email.txt.twig
+        form:
+            type:               FOS\UserBundle\Form\Type\ResettingFormType
+            name:               fos_user_resetting_form
+            validation_groups:  [ResetPassword, Default]
+    service:
+        mailer:                 fos_user.mailer.default
+        email_canonicalizer:    fos_user.util.canonicalizer.default
+        username_canonicalizer: fos_user.util.canonicalizer.default
+        token_generator:        fos_user.util.token_generator.default
+        user_manager:           fos_user.user_manager.default
+    # registration:
+    #     confirmation:
+    #         from_email:
+    #             address: registration@legtux.org
+    #             sender_name: Registration confirmation
+    #         enabled: true;
+    from_email:
+        address: noreply@legtux.org
+        sender_name: Palyndiel
+    # resetting:
+    #     email:
+    #         from_email:
+    #             address: resetting@legtux.org
+    #             sender_name: Reset password
+
+services:
+    fos_user.doctrine_registry:
+        alias: doctrine
+        
+fos_comment:
+    db_driver: orm
+    class:
+        model:
+            comment: MM\PlatformBundle\Entity\Comment
+            thread: MM\PlatformBundle\Entity\Thread
+
+assetic:
+    bundles: [ "FOSCommentBundle" ]  
+
+ivory_ck_editor:
+    default_config:                     my_custom_config    # Utiliser par defaut la configuration my_custom_config
+    configs:
+        my_custom_config:
+            language:                   %locale%
+            toolbar:                    [ [ 'Preview' ], [ 'Cut','Copy','Paste','PasteText','PasteFromWord','-','Undo','Redo' ], [ 'Find','Replace','-','SelectAll','-','SpellChecker', 'Scayt' ], [ 'Source' ], [ "About" ], "/", [ 'Bold','Italic','Underline','Strike', 'Blockquote','Subscript','Superscript','-','RemoveFormat' ], [ 'NumberedList','BulletedList','-','Outdent','Indent','-','-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock' ], [ 'Link','Unlink','Anchor' ], [ 'pbckcode', 'Image', 'Video', 'Table','SpecialChar','Iframe' ], '/', [ 'Styles', 'Format','Font','FontSize' ], [ 'TextColor','BGColor' ], [ 'RemoveFormat' ], [ 'Maximize' ] ]            # Charger la toolbar tollbar_1 (voir plus bas)
+            #extraPlugins:               ['wordcount']
+            stylesSet:                  my_styles           # Chargement des styles personnalisables my_styles (voir plus bas)
+            uiColor:                    "#FCFCFC"           # Couleur de fond de l'interface
+            height:                     '600px'             # Hauteur par défaut
+            # Utiliser les styles css suivants dans le contenu de l'éditeur. Permet de voir le rendu en temps réeem
+            contentsCss:                ['bundles/app/css/style.css']
+            #skin: 'flat,/skins/flat/'
+    plugins: 
+        wordcount:
+            path:                       '/bundles/ivoryckeditor/plugins/wordcount'
+            filename:                   'plugin.js'
+    styles:         # Configuration des styles personnalisables
+        my_styles:
+            - { name: "Alerte Success", element: "div",  attributes: { class: "alert alert-success", role: "alert" }}
+            - { name: "Alerte Info", element: "div",  attributes: { class: "alert alert-info", role: "alert" }}
+            - { name: "Alerte Warning", element: "div",  attributes: { class: "alert alert-warning", role: "alert" }}
+            - { name: "Alerte Danger", element: "div",  attributes: { class: "alert alert-danger", role: "alert" }}
+            - { name: "Badge", element: "span",  attributes: { class: "badge" }}
