@@ -1,7 +1,7 @@
-mm_core_homepage:
-    path:     /home/{limit}
-    defaults: 
-        _controller:  MMCoreBundle:Core:index
-        limit: 3
-    requirements:
-        page: \d*
+#mm_core_homepage:
+#    path:     /home/{limit}
+#    defaults:
+#        _controller:  MMCoreBundle:Core:index
+#        limit: 3
+#    requirements:
+#        page: \d*

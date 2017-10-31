@@ -159,7 +159,7 @@ class ArticleController extends Controller
 
       $request->getSession()->getFlashBag()->add('notice', 'Article bien enregistrée.');
 
-      return $this->redirectToRoute('mm_platform_view', array('id' => $article->getId()));
+      return $this->redirectToRoute('mm_platform_view', array('slug' => $article->getSlug()));
     }
 
     return $this->render('MMPlatformBundle:Article:add.html.twig', array(
@@ -189,7 +189,7 @@ class ArticleController extends Controller
 
       $request->getSession()->getFlashBag()->add('notice', 'Article bien modifiée.');
 
-      return $this->redirectToRoute('mm_platform_view', array('id' => $article->getId()));
+      return $this->redirectToRoute('mm_platform_view', array('slug' => $article->getSlug()));
     }
 
     return $this->render('MMPlatformBundle:Article:edit.html.twig', array(

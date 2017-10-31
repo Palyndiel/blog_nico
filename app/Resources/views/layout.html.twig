@@ -22,7 +22,8 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="{{ path('mm_core_homepage') }}">Blog de Nico</a>
+                    {#<a class="navbar-brand" href="{{ path('mm_core_homepage') }}">Blog de Nico</a>#}
+                    <a class="navbar-brand" href="{{ path('mm_platform_home') }}">Blog de Nico</a>
                 </div>
                 <div class="collapse navbar-collapse" id="navbar-collapse-target">
                     <ul class="nav navbar-nav">
@@ -30,6 +31,7 @@
                         <li><a href="{{ path('mm_platform_list_articles') }}"><span class="glyphicon glyphicon-text-background"></span> Articles</a></li>
                         <li><a href="{{ path('mm_platform_list_pictures') }}"><span class="glyphicon glyphicon-camera"></span> Photos</a></li>
                         <li><a href="{{ path('mm_platform_list_videos') }}"><span class="glyphicon glyphicon-film"></span> Vidéos</a></li>
+                        <li><a href="http://ycr.pingfiles.fr/#portfolio"><span class="glyphicon glyphicon-home"></span> Retour au Portfolio</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         {% if app.user and is_granted('ROLE_ADMIN') %}
@@ -73,7 +75,7 @@
   <div class="form-group">
     <label for="username" class="col-sm-3 control-label">Nom d'utilisateur</label>
     <div class="col-sm-9">
-      <input type="text" class="form-control" id="username" placeholder="Utilisateur" value="{% if last_username is defined %} {{ last_username }} {% endif %}" required="required">
+      <input type="text" class="form-control" id="username" name="_username" placeholder="Utilisateur" value="{% if last_username is defined and last_username is not empty %} {{ last_username }} {% endif %}" required="required">
     </div>
   </div>
   <div class="form-group">

@@ -1,8 +1,15 @@
+#mm_home:
+#    path: /
+#    defaults:
+#        _controller: FrameworkBundle:Redirect:urlRedirect
+#        path: /home
+#        permanent: true
+
 mm_home:
     path: /
     defaults:
         _controller: FrameworkBundle:Redirect:urlRedirect
-        path: /home
+        path: /platform
         permanent: true
 
 mm_core:

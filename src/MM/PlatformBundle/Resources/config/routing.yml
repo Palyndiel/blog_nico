@@ -1,9 +1,17 @@
 # src/OC/PlatformBundle/Resources/config/routing.yml
 
+#mm_platform_home:
+#    path:      /{limit}
+#    defaults:
+#        _controller: MMCoreBundle:Core:index
+#        limit:		 3
+#    requirements:
+#        page: \d*
+
 mm_platform_home:
     path:      /{limit}
     defaults:
-        _controller: MMCoreBundle:Core:index
+        _controller: MMPlatformBundle:Article:index
         limit:		 3
     requirements:
         page: \d*

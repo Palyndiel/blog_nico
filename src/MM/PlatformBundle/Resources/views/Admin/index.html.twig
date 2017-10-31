@@ -35,7 +35,7 @@
                 </thead>
                 {% for article in listArticles %}
                 <tr>
-                    <td><a class="articleTitle" href="{{ path('mm_platform_view', { 'id': article.id }) }}">{{ article.title }}</a></td>
+                    <td><a class="articleTitle" href="{{ path('mm_platform_view', { 'slug': article.slug }) }}">{{ article.title }}</a></td>
                     <td>{{ article.content }}</td>
                     <td>
                         <a href="{{ path('mm_platform_edit', { 'id': article.id }) }}" class="btn btn-info btn-xs" title="Edit"><span class="glyphicon glyphicon-edit"></span></a>

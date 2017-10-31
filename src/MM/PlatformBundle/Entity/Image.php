@@ -8,7 +8,7 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 /**
  * Image
  *
- * @ORM\Table(name="image")
+ * @ORM\Table(name="blog_image")
  * @ORM\Entity(repositoryClass="MM\PlatformBundle\Repository\ImageRepository")
  * @ORM\HasLifecycleCallbacks
  */

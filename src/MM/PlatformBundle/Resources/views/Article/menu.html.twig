@@ -3,7 +3,7 @@
 <ul class="nav nav-pills nav-stacked">
   {% for article in listArticles %}
     <li>
-      <a href="{{ path('mm_platform_view', {'id': article.id}) }}">
+      <a href="{{ path('mm_platform_view', {'slug': article.slug}) }}">
         {{ article.title }}
       </a>
     </li>

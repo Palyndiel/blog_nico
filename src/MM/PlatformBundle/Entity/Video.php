@@ -8,7 +8,7 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 /**
  * Video
  *
- * @ORM\Table(name="video")
+ * @ORM\Table(name=" video")
  * @ORM\Entity(repositoryClass="MM\PlatformBundle\Repository\VideoRepository")
  * @ORM\HasLifecycleCallbacks
  */

@@ -14,7 +14,7 @@
 
   {# On met l'id de l'annonce dans la route de l'action du formulaire #}
   <form action="{{ path('mm_platform_delete', {'id': article.id}) }}" method="post">
-    <a href="{{ path('mm_platform_view', {'id': article.id}) }}" class="btn btn-default">
+    <a href="{{ path('mm_platform_view', {'slug': article.slug}) }}" class="btn btn-default">
       <i class="glyphicon glyphicon-chevron-left"></i>
       Retour à l'article
     </a>
